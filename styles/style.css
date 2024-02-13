@@ -56,10 +56,6 @@ body {
     margin: 5% auto 20px; /* margen inferior para separar la foto del texto */
 }
 
-.texto {
-    /* estilos para el texto */
-}
-
 .texto h2 {
     /* estilos para el título plantafriendly */
     color: #49352a;
