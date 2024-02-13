@@ -24,6 +24,60 @@
     transform: translateX(-50%);
     z-index: 2;
 }
+/* estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* estilos para la sección sobre nosotros */
+.sobre-nosotros {
+    padding: 50px 0;
+}
+
+.foto-grupal {
+    /* estilos para la foto grupal */
+    text-align: center;
+}
+
+.foto-grupal img {
+    /* tamaño de la foto grupal */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    margin: 5% auto 20px; /* margen inferior para separar la foto del texto */
+}
+
+.texto {
+    /* estilos para el texto */
+}
+
+.texto h2 {
+    /* estilos para el título plantafriendly */
+    color: #49352a;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.texto h3 {
+    /* estilos para los títulos 'Misión' y 'Visión' */
+    color: #49352a;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    /* estilos para los párrafos */
+    line-height: 1.6;
+}
 
 /* Estilos para la sección de contactos */
 .contacts {
@@ -82,7 +136,7 @@
     text-align: center; /* Centrar el contenido */
 }
 
-/* Estilos para la sección de formulario */
+
 /* Estilos para la sección de formulario */
 .formulario {
     padding: 50px 0; /* Espaciado interior de la sección */
@@ -210,3 +264,4 @@
     height: 30px;
   }
   
+
