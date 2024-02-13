@@ -1,3 +1,4 @@
+/*estilos para el carrusel*/
 .carousel-item img {
     max-height: 600px; /* Cambia este valor según el tamaño deseado */
     width: auto;
@@ -24,3 +25,188 @@
     z-index: 2;
 }
 
+/* Estilos para la sección de contactos */
+.contacts {
+    padding: 10px 0; /* Espaciado interior de la sección */
+    background-color: #79dd72; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados para el cuadro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; 
+}
+
+.container {
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+}
+
+.content-head {
+    text-align: center; /* Centrar el contenido */
+    margin-bottom: 50px; /* Espaciado inferior */
+}
+
+.card-title {
+    margin-bottom: 5px; /* Espaciado inferior del título */
+}
+.item-wrapper{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5px 0 5px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.mbr-text {
+    font-size: 18px; /* Tamaño de fuente del texto */
+    margin-bottom: 20x; /* Espaciado inferior del texto */
+}
+
+.mbr-text a {
+    color: #333; 
+    text-decoration: none; 
+}
+
+.mbr-text a:hover {
+    text-decoration: underline; 
+}
+
+/* Estilos para el footer*/
+.footer {
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Color del texto en blanco */
+    padding: 20px 0; /* Espaciado interior */
+}
+
+.footer .container {
+    text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para la sección de formulario */
+/* Estilos para la sección de formulario */
+.formulario {
+    padding: 50px 0; /* Espaciado interior de la sección */
+    background-color: #f8f9fa; /* Color de fondo */
+}
+
+.container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+}
+
+.content-head {
+    text-align: center; /* Centrar el contenido */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.mbr-section-title {
+    font-size: 36px; /* Tamaño de fuente del título */
+}
+.formcampos{
+    background-color: #79dd72;
+    padding: 20px 0 10px;
+    border-radius: 20px;
+}
+
+.mbr-form input[type="text"],
+.mbr-form input[type="email"],
+.mbr-form input[type="url"],
+.mbr-form textarea {
+    width: 100%; /* Ancho completo del campo de entrada */
+    padding: 10px; /* Espaciado interior */
+    margin-bottom: 15px; /* Espaciado inferior */
+    border: 1px solid #ccc; /* Borde del campo de entrada */
+    border-radius: 8px; /* Radio de borde */
+    box-sizing: border-box; /* Box-sizing */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.mbr-form textarea {
+    height: 100px; /* Altura del área de texto */
+}
+
+.mbr-section-btn {
+    text-align: center; /* Centrar botón */
+}
+
+.btn-success {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 15px 25px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Radio de borde */
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn-success:hover {
+    background-color: #45a049; /* Color de fondo del botón al pasar */
+}
+/* Estilos de la seccion Redes Sociales*/
+
+.redes-sociales {
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  .redes-sociales h2 {
+    font-size: 24px;
+  }
+  
+  .redes-lista {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .redes-lista li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .redes-lista li img {
+    width: 40px;
+    height: 40px;
+  }
+  /* Estilos de la seccion Equipo*/
+  .equipo {
+    text-align: center;
+    margin: 50px auto;
+    padding: 10px 0 10px;
+  }
+  
+  .equipo h3 {
+    font-size: 50px;
+  }
+  
+  .equipo-lista {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .equipo-lista li {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .equipo-lista li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .miembro-info {
+    margin-top: 10px;
+  }
+  
+  .miembro-info h4 {
+    margin: 5px 0;
+    font-size: 25px;
+  }
+  
+  .miembro-info img {
+    width: 30px;
+    height: 30px;
+  }
+  
