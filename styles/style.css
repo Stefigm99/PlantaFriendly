@@ -24,6 +24,14 @@
     transform: translateX(-50%);
     z-index: 2;
 }
+#custom-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ajusta el índice z para asegurarte de que la barra de navegación esté en la parte superior */
+    background-color: #f8f9fa; /* Cambia el color de fondo */
+    padding: 10px 20px; /* Añade espacio entre elementos */
+}
 /* estilos generales */
 body {
     font-family: Arial, sans-serif;
