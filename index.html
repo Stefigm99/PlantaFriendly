@@ -14,20 +14,17 @@
   <main>
     <nav class="navbar navbar-expand-lg" id="custom-navbar">
       <div class="container-fluid">
-        <img src="assets/img/planta.png" alt="" style="height: 4.3rem;">
-        <a class="navbar-brand" href="#">PlantaFriendly</a>
+        <img src="assets/img/planta.png" alt="" style="height: 3.3rem;">
+        <a class="navbar-brand" href="#" style="color: rgb(9, 73, 9);">PlantaFriendly</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <div class="search-container" >
+          <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+          <img class="search-icon" src="assets/img/lupa.png" alt="">
+        </div>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Catalogo
@@ -41,10 +38,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Noticias</a>
+              <a class="nav-link" href="#">Eventos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Sobre Nosotros</a>
@@ -55,15 +49,17 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Suscribete</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Inicia Sesión</a>
-            </li>
           </ul>
         </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Inicia Sesión</a>
+        </div>
+        <img src="assets/img/carrito-de-compras.png" alt="Carrito de compras" class="carrito-icon">
       </div>
     </nav>
+     <!--Seccion de carrusel-->
     <section>
-      <div id="carouselExampleCaptions" class="carousel slide">
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>
@@ -75,7 +71,7 @@
             aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item active" data-bs-interval="5000">
             <img src="assets/img/carrusel.jpeg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h1>Servicios de jardinería</h1>
@@ -83,15 +79,15 @@
               <button class="btn btn-outline-light">Ver más</button>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" data-bs-interval="5000">
             <img src="assets/img/carrusel2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block" >
               <h1>Consejos de Cuidado: </h1>
               <h5>Mantén tus Plantas Felices y Saludables.</h5>
               <button class="btn btn-outline-light">Ver más</button>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" data-bs-interval="5000">
             <img src="assets/img/carrusel3.jpeg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h1>Herramientas de Jardinería </h1>
@@ -99,7 +95,7 @@
               <button class="btn btn-outline-light">Ver más</button>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" data-bs-interval="5000">
             <img src="assets/img/carrusel4.jpeg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h1>Diseño de Paisajes </h1>
@@ -108,13 +104,11 @@
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -132,7 +126,7 @@
             </div>
             <div class="col-md-6">
               <div class="texto">
-                <h2>PlantaFriendly</h2>
+                <h2>Sobre nosotros</h2>
                 <h3>Misión</h3>
                 <p>Nuestra misión en PlantaFriendly es crear espacios verdes que inspiren y conecten a las personas con la
                   naturaleza. Nos comprometemos a proporcionar servicios de jardinería y paisajismo de alta calidad que
@@ -141,6 +135,82 @@
                 <p>Nuestra visión es ser líderes en la industria de la jardinería y el paisajismo, reconocidos por nuestra
                   excelencia, innovación y compromiso con la sostenibilidad. Queremos contribuir a un mundo más verde y
                   saludable para las generaciones futuras.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Seccion de eventos-->
+      <section class="eventos" id="events">
+        <div class="container-fluid">
+          <div class="row justify-content-center mb-3">
+            <div class="col-12 content-head">
+              <div class="mbr-section-head">
+                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-5">
+                  <strong>Eventos Actuales</strong>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="item features-image col-12 col-md-6 col-lg-3 active">
+              <div class="item-wrapper">
+                <div class="item-img mb-3">
+                  <img src="assets/img/evento.jpeg">
+                </div>
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-6">
+                    <strong><a class="text-black fw-bold" href="#">Taller de Podado Creativo</a></strong>
+                  </h6>
+                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Viernes 16 de Febrero</p>
+                  <p class="mbr-text mbr-fonts-style mb-3 display-7">¡Aprende a dar forma a tus plantas de manera única y divertida! Cupos limitados, ¡reserva tu lugar ahora!</p>
+                  <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Reservar</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="item features-image col-12 col-md-6 col-lg-3">
+              <div class="item-wrapper">
+                <div class="item-img mb-3">
+                  <img src="assets/img/evento2.jpeg" data-slide-to="1" data-bs-slide-to="1">
+                </div>
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-6">
+                    <strong><a class="text-black fw-bold" href="#">Feria de Semillas Locales</a></strong>
+                  </h6>
+                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Sábado 24 de Febrero</p>
+                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Descubre variedades únicas de semillas locales y llévate a casa tus favoritas. ¡No te lo pierdas!</p>
+                  <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Reservar</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="item features-image col-12 col-md-6 col-lg-3">
+              <div class="item-wrapper">
+                <div class="item-img mb-3">
+                  <img src="assets/img/evento3.jpeg" data-slide-to="2" data-bs-slide-to="2">
+                </div>
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-6">
+                    <strong><a class="text-black fw-bold" href="#">Concurso de Jardines Creativos</a></strong>
+                  </h6>
+                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Domingo 4 de Marzo</p>
+                  <p class="mbr-text mbr-fonts-style mb-3 display-7">¡Demuestra tu creatividad en nuestro concurso de jardines y gana premios increíbles! ¡Inscripciones abiertas!</p>
+                  <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Reservar</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="item features-image col-12 col-md-6 col-lg-3">
+              <div class="item-wrapper">
+                <div class="item-img mb-3">
+                  <img src="assets/img/evento4.jpeg" data-slide-to="3" data-bs-slide-to="3">
+                </div>
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-6">
+                    <strong><a class="text-black fw-bold" href="#">Charla sobre Plantas Medicinales</a></strong>
+                  </h6>
+                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Sábado 10 de Marzo</p>
+                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Aprende sobre el poder curativo de las plantas y cómo incorporarlas en tu vida diaria. ¡Reserva tu lugar ahora!</p>
+                  <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Reservar</a></div>
+                </div>
               </div>
             </div>
           </div>
@@ -180,6 +250,7 @@
           </div>
       </div>
   </section>
+   <!--Seccion de equipo (Integrantes)-->
   <section class="equipo">
     <h3 class="mbr-section-title mbr-fonts-style align-center display-5">Nuestro equipo</h3>
     <ul class="equipo-lista">
@@ -197,7 +268,7 @@
       </li>
       <li>
         <div class="miembro-info">       
-          <a href="https://github.com/miembro2" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
+          <a href="https://github.com/" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
           <h4 class="mbr-section-title mbr-fonts-style align-center display-7">Alexander Loaiza</h4>
         </div>
       </li>
@@ -209,6 +280,7 @@
       </li>
     </ul>
   </section>
+   <!--Seccion de formulario de contacto-->
     <section class="contacts" id="contacts">
       <div class="container">
           <div class="row justify-content-center">
@@ -272,6 +344,7 @@
           </div>
       </div>
   </section>
+   <!--Seccion de redes sociales-footer-->
   <section class="redes-sociales">
     <h2>Síguenos en nuestras redes sociales</h2>
     <ul class="redes-lista">

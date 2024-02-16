@@ -1,8 +1,8 @@
 /*estilos para el carrusel*/
 .carousel-item img {
-    max-height: 600px; /* Cambia este valor según el tamaño deseado */
+    max-height: 600px; 
     width: auto;
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+    margin: 0 auto; 
 }
 .carousel-item::after {
     content: '';
@@ -24,21 +24,62 @@
     transform: translateX(-50%);
     z-index: 2;
 }
+/*Estilo de barra de navegacion*/
 #custom-navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ajusta el índice z para asegurarte de que la barra de navegación esté en la parte superior */
-    background-color: #f8f9fa; /* Cambia el color de fondo */
-    padding: 10px 20px; /* Añade espacio entre elementos */
+    z-index: 1000; 
+    background-color: #f5f0e0; 
+    padding: 10px 20px; 
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
+.navbar-brand {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.search-container {
+    position: relative;
+    width: 25%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: auto; 
+    cursor: pointer;
+    order: 1;
+  }
+  .carrito-icon {
+    height: 2rem; 
+    margin-left: 10px; 
+    cursor: pointer; 
+  }
+  .form-control {
+    width: 100%; /* Ajustar el ancho para que ocupe todo el espacio disponible */
+    text-indent: 20px;
+  }
+  .dropdown-menu.show .dropdown-item:active {
+    background-color: rgb(49, 99, 49); /* Cambia el color de fondo al hacer clic */
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    background-color: rgb(164, 218, 164); /* Cambia el color del texto */
+    border-radius: 10px;
+  }
+  .navbar-nav  {
+    margin-left: 50px; 
+  }
+  .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(5, 109, 9, 0.25) !important; 
+    border-color: #99e39c !important;
+  }
+  
 /* estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -66,14 +107,14 @@ body {
 
 .texto h2 {
     /* estilos para el título plantafriendly */
-    color: #49352a;
+    color: #2a492b;
     font-size: 28px;
     margin-bottom: 20px;
 }
 
 .texto h3 {
     /* estilos para los títulos 'Misión' y 'Visión' */
-    color: #49352a;
+    color: #2a492b;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -81,6 +122,64 @@ body {
 .texto p {
     /* estilos para los párrafos */
     line-height: 1.6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* Estilos para los eventos*/
+.eventos {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #f7f6f6;
+  }
+  .eventos img,
+  .eventos .item-img {
+    width: 100%;
+    height: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+ 
+  .item-content h6 {
+    font-size: 1.2em; /* Ajusta el tamaño del título */
+    font-weight: bold; /* Hace que el título sea negrita */
+    margin-bottom: 10px; 
+}
+.item-subtitle a {
+    text-decoration: none;
+}
+.item-content p {
+    font-size: 0.9em;
+    line-height: 1.5; 
+    margin-bottom: 10px; 
+}
+.item-content {
+    padding-top: 5px; /* Margen superior */
+    padding-right: 10px; /* Margen derecho */
+    padding-bottom: 15px; /* Margen inferior */
+    padding-left: 15px; /* Margen izquierdo */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.item-footer .btn {
+    background-color: #4CAF50; /* Cambia el color de fondo del botón */
+    color: white; /* Cambia el color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 10px 20px; /* Ajusta el espacio dentro del botón */
+    font-size: 0.9em; /* Ajusta el tamaño del texto del botón */
+    border-radius: 5px; /* Agrega bordes redondeados al botón */
+}
+.item {
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px black;
+    text-align: center;
+    transition: all 0.25s;
+}
+.item:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 15px 18px black;
+}
+
+.item-footer .btn:hover {
+    background-color: #45a049; /* Cambia el color de fondo del botón al pasar el mouse */
 }
 
 /* Estilos para la sección de contactos */
