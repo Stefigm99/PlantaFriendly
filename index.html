@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="styles/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="icon" href="assets/img/planta.png" type="image/x-icon">
+
   <title>PlantaFriendly</title>
 </head>
 
@@ -16,17 +18,19 @@
       <div class="container-fluid">
         <img src="assets/img/planta.png" alt="" style="height: 3.3rem;">
         <a class="navbar-brand" href="#" style="color: rgb(9, 73, 9);">PlantaFriendly</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="search-container" >
+        <div class="search-container">
           <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
           <img class="search-icon" src="assets/img/lupa.png" alt="">
         </div>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Catalogo
               </a>
               <ul class="dropdown-menu">
@@ -38,26 +42,44 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Eventos</a>
+              <a class="nav-link" href="#events">Eventos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Sobre Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="#contact">Contacto</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Suscribete</a>
             </li>
           </ul>
         </div>
-        <div class="nav-item">
-          <a class="nav-link" href="#">Inicia Sesión</a>
-        </div>
-        <img src="assets/img/carrito-de-compras.png" alt="Carrito de compras" class="carrito-icon">
+        <div  id="iconoCarrito">
+        <img src="assets/img/carrito-de-compras.png" id="carr" alt="Carrito de compras" class="carrito-icon">
+      </div>
       </div>
     </nav>
-     <!--Seccion de carrusel-->
+<!-- Modal del carrito -->
+<div class="modal" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-end">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del carrito -->
+        <p>Sin productos seleccionados</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success">Realizar pedido</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--Seccion de carrusel-->
     <section>
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -81,7 +103,7 @@
           </div>
           <div class="carousel-item" data-bs-interval="5000">
             <img src="assets/img/carrusel2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block" >
+            <div class="carousel-caption d-none d-md-block">
               <h1>Consejos de Cuidado: </h1>
               <h5>Mantén tus Plantas Felices y Saludables.</h5>
               <button class="btn btn-outline-light">Ver más</button>
@@ -104,269 +126,270 @@
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
     </section>
-    
-       <!--Seccion sobre nosotros con la informacion de la empresa-->
-       <section class="sobre-nosotros">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="foto-grupal">
-                <img src="assets/img/fotogrupal.jpg" alt="">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="texto">
-                <h2>Sobre nosotros</h2>
-                <h3>Misión</h3>
-                <p>Nuestra misión en PlantaFriendly es crear espacios verdes que inspiren y conecten a las personas con la
-                  naturaleza. Nos comprometemos a proporcionar servicios de jardinería y paisajismo de alta calidad que
-                  mejoren la calidad de vida de nuestros clientes.</p>
-                <h3>Visión</h3>
-                <p>Nuestra visión es ser líderes en la industria de la jardinería y el paisajismo, reconocidos por nuestra
-                  excelencia, innovación y compromiso con la sostenibilidad. Queremos contribuir a un mundo más verde y
-                  saludable para las generaciones futuras.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Seccion de eventos-->
-      <section class="eventos" id="events">
-        <div class="container-fluid">
-          <div class="row justify-content-center mb-3">
-            <div class="col-12 content-head">
-              <div class="mbr-section-head">
-                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-5">
-                  <strong>Eventos Actuales</strong>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="item features-image col-12 col-md-6 col-lg-3 active">
-              <div class="item-wrapper">
-                <div class="item-img mb-3">
-                  <img src="assets/img/evento.jpeg">
-                </div>
-                <div class="item-content align-left">
-                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-6">
-                    <strong><a class="text-black fw-bold" href="#">Taller de Podado Creativo</a></strong>
-                  </h6>
-                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Viernes 16 de Febrero</p>
-                  <p class="mbr-text mbr-fonts-style mb-3 display-7">¡Aprende a dar forma a tus plantas de manera única y divertida! Cupos limitados, ¡reserva tu lugar ahora!</p>
-                  <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Reservar</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img mb-3">
-                  <img src="assets/img/evento2.jpeg" data-slide-to="1" data-bs-slide-to="1">
-                </div>
-                <div class="item-content align-left">
-                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-6">
-                    <strong><a class="text-black fw-bold" href="#">Feria de Semillas Locales</a></strong>
-                  </h6>
-                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Sábado 24 de Febrero</p>
-                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Descubre variedades únicas de semillas locales y llévate a casa tus favoritas. ¡No te lo pierdas!</p>
-                  <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Reservar</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img mb-3">
-                  <img src="assets/img/evento3.jpeg" data-slide-to="2" data-bs-slide-to="2">
-                </div>
-                <div class="item-content align-left">
-                  <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-6">
-                    <strong><a class="text-black fw-bold" href="#">Concurso de Jardines Creativos</a></strong>
-                  </h6>
-                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Domingo 4 de Marzo</p>
-                  <p class="mbr-text mbr-fonts-style mb-3 display-7">¡Demuestra tu creatividad en nuestro concurso de jardines y gana premios increíbles! ¡Inscripciones abiertas!</p>
-                  <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Reservar</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="item features-image col-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img mb-3">
-                  <img src="assets/img/evento4.jpeg" data-slide-to="3" data-bs-slide-to="3">
-                </div>
-                <div class="item-content align-left">
-                  <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-6">
-                    <strong><a class="text-black fw-bold" href="#">Charla sobre Plantas Medicinales</a></strong>
-                  </h6>
-                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Sábado 10 de Marzo</p>
-                  <p class="mbr-text mbr-fonts-style mb-3 display-7">Aprende sobre el poder curativo de las plantas y cómo incorporarlas en tu vida diaria. ¡Reserva tu lugar ahora!</p>
-                  <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Reservar</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    <section class="formulario" id="">
+
+    <!--Seccion sobre nosotros con la informacion de la empresa-->
+    <section class="sobre-nosotros">
       <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-5 content-head">
-                  <div class="mbr-section-head mb-3">
-                      <h3 class="mbr-section-title mbr-fonts-style align-center display-5">
-                          <strong>¡Contactanos!</strong>
-                      </h3>                    
-                  </div>
-              </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="foto-grupal">
+              <img src="assets/img/fotogrupal.jpg" alt="">
+            </div>
           </div>
-          <div class="row justify-content-center">
-              <div class=" formcampos col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                  <form action="" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="">
-                      <div class="dragArea row">
-                          <div class="col-md col-sm-12 form-group mb-3" data-for="name">
-                              <input type="text" name="name" placeholder="Nombre" data-form-field="name" class="form-control" value="" id="name">
-                          </div>
-                          <div class="col-md col-sm-12 form-group mb-3" data-for="email">
-                              <input type="email" name="email" placeholder="Correo" data-form-field="email" class="form-control" value="" id="email">
-                          </div>
-                          <div class="col-12 form-group mb-3" data-for="telefono">
-                              <input type="url" name="url" placeholder="Teléfono" data-form-field="telefono" class="form-control" value="" id="telefono">
-                          </div>
-                          <div class="col-12 form-group mb-3" data-for="comentario">
-                              <textarea name="textarea" placeholder="Mensaje" data-form-field="comentario" class="form-control" id="comentario"></textarea>
-                          </div>
-                          <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-success display-7">Enviar</button></div>
-                      </div>
-                  </form>
-              </div>
+          <div class="col-md-6">
+            <div class="texto">
+              <h2>Sobre nosotros</h2>
+              <p>
+                En PlantaFriendly, nuestra pasión por la naturaleza y la jardinería nos llevó a crear un espacio donde
+                los amantes de las plantas puedan encontrar todo lo que necesitan para cultivar su propio paraíso verde.
+                La idea de PlantaFriendly surgió de la necesidad de ofrecer a nuestra comunidad productos de calidad y
+                asesoramiento experto en un ambiente acogedor y amigable.
+              </p>
+              <p>frecemos una amplia gama de productos y servicios para satisfacer todas tus
+                necesidades de jardinería. Desde semillas y plantas hasta herramientas de jardinería y consultoría
+                experta, tenemos todo lo que necesitas para crear y mantener un jardín hermoso y saludable.</p>
+            </div>
           </div>
+        </div>
       </div>
-  </section>
-   <!--Seccion de equipo (Integrantes)-->
-  <section class="equipo">
-    <h3 class="mbr-section-title mbr-fonts-style align-center display-5">Nuestro equipo</h3>
-    <ul class="equipo-lista">
-      <li>
-        <div class="miembro-info">
-          <a href="https://github.com/karolroo" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
-          <h4 class="mbr-section-title mbr-fonts-style align-center display-7">Karol Rojas</h4>
+    </section>
+    <!--Seccion de eventos-->
+    <section class="eventos" id="events">
+      <div class="container-fluid">
+        <div class="row justify-content-center mb-3">
+          <div class="col-12 content-head">
+            <div class="mbr-section-head">
+              <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-5">
+                <strong>Eventos Actuales</strong>
+              </h4>
+            </div>
+          </div>
         </div>
-      </li>
-      <li>
-        <div class="miembro-info">
-          <a href="https://github.com/Stefigm99" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
-          <h4 class="mbr-section-title mbr-fonts-style align-center display-7">Stefany Gasca</h4>
+        <div class="row">
+          <div class="item features-image col-12 col-md-6 col-lg-3 active">
+            <div class="item-wrapper">
+              <div class="item-img mb-3">
+                <img src="assets/img/evento.jpeg">
+              </div>
+              <div class="item-content align-left">
+                <h6 class="item-subtitle mbr-fonts-style mb-3 display-6">
+                  <strong><a class="text-black fw-bold" href="#">Taller de Podado Creativo</a></strong>
+                </h6>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">Viernes 16 de Febrero</p>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">¡Aprende a dar forma a tus plantas de manera única y
+                  divertida! Cupos limitados, ¡reserva tu lugar ahora!</p>
+                <div class="mbr-section-btn item-footer"><a href="#"
+                    class="btn item-btn btn-primary display-7">Reservar</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="item features-image col-12 col-md-6 col-lg-3">
+            <div class="item-wrapper">
+              <div class="item-img mb-3">
+                <img src="assets/img/evento2.jpeg" data-slide-to="1" data-bs-slide-to="1">
+              </div>
+              <div class="item-content align-left">
+                <h6 class="item-subtitle mbr-fonts-style mb-3 display-6">
+                  <strong><a class="text-black fw-bold" href="#">Feria de Semillas Locales</a></strong>
+                </h6>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">Sábado 24 de Febrero</p>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">Descubre variedades únicas de semillas locales y
+                  llévate a casa tus favoritas. ¡No te lo pierdas!</p>
+                <div class="mbr-section-btn item-footer"><a href="#"
+                    class="btn item-btn btn-primary display-7">Reservar</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="item features-image col-12 col-md-6 col-lg-3">
+            <div class="item-wrapper">
+              <div class="item-img mb-3">
+                <img src="assets/img/evento3.jpeg" data-slide-to="2" data-bs-slide-to="2">
+              </div>
+              <div class="item-content align-left">
+                <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-6">
+                  <strong><a class="text-black fw-bold" href="#">Concurso de Jardines Creativos</a></strong>
+                </h6>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">Domingo 4 de Marzo</p>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">¡Demuestra tu creatividad en nuestro concurso de
+                  jardines y gana premios increíbles! ¡Inscripciones abiertas!</p>
+                <div class="mbr-section-btn item-footer"><a href="#"
+                    class="btn item-btn btn-primary display-7">Reservar</a></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </li>
-      <li>
-        <div class="miembro-info">       
-          <a href="https://github.com/" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
-          <h4 class="mbr-section-title mbr-fonts-style align-center display-7">Alexander Loaiza</h4>
+      </div>
+    </section>
+    <section class="formulario" id="contact">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-5 content-head">
+            <div class="mbr-section-head mb-3">
+              <h3 class="mbr-section-title mbr-fonts-style align-center display-5">
+                <strong>¡Contactanos!</strong>
+              </h3>
+            </div>
+          </div>
         </div>
-      </li>
-      <li>
-        <div class="miembro-info">
-          <a href="https://github.com/Laura1057" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
-          <h4 class="mbr-section-title mbr-fonts-style align-center display-7">Laura Sofia Henao</h4>
+        <div class="row justify-content-center">
+          <div class=" formcampos col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+            <form action="" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden"
+                name="email" data-form-email="true" value="">
+              <div class="dragArea row">
+                <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                  <input type="text" name="name" placeholder="Nombre" data-form-field="name" class="form-control"
+                    value="" id="name">
+                </div>
+                <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                  <input type="email" name="email" placeholder="Correo" data-form-field="email" class="form-control"
+                    value="" id="email">
+                </div>
+                <div class="col-12 form-group mb-3" data-for="telefono">
+                  <input type="url" name="url" placeholder="Teléfono" data-form-field="telefono" class="form-control"
+                    value="" id="telefono">
+                </div>
+                <div class="col-12 form-group mb-3" data-for="comentario">
+                  <textarea name="textarea" placeholder="Mensaje" data-form-field="comentario" class="form-control"
+                    id="comentario"></textarea>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit"
+                    class="btn btn-success display-7">Enviar</button></div>
+              </div>
+            </form>
+          </div>
         </div>
-      </li>
-    </ul>
-  </section>
-   <!--Seccion de formulario de contacto-->
+      </div>
+    </section>
+    <!--Seccion de equipo (Integrantes)-->
+    <section class="equipo">
+      <h3 class="mbr-section-title mbr-fonts-style align-center display-5">Nuestro equipo</h3>
+      <ul class="equipo-lista">
+        <li>
+          <div class="miembro-info">
+            <a href="https://github.com/karolroo" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
+            <h4 class="mbr-section-title mbr-fonts-style align-center display-7">Karol Rojas</h4>
+          </div>
+        </li>
+        <li>
+          <div class="miembro-info">
+            <a href="https://github.com/Stefigm99" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
+            <h4 class="mbr-section-title mbr-fonts-style align-center display-7">Stefany Gasca</h4>
+          </div>
+        </li>
+        <li>
+          <div class="miembro-info">
+            <a href="https://github.com/" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
+            <h4 class="mbr-section-title mbr-fonts-style align-center display-7">Alexander Loaiza</h4>
+          </div>
+        </li>
+        <li>
+          <div class="miembro-info">
+            <a href="https://github.com/Laura1057" target="_blank"><img src="assets/img/github.png" alt="GitHub"></a>
+            <h4 class="mbr-section-title mbr-fonts-style align-center display-7">Laura Sofia Henao</h4>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!--Seccion de formulario de contacto-->
     <section class="contacts" id="contacts">
       <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-12 content-head">
-                  <div class="mbr-section-head mb-5">
-                      <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-5">
-                          <strong>Expertos Jardinería</strong>
-                      </h3>
-                  </div>
-              </div>
+        <div class="row justify-content-center">
+          <div class="col-12 content-head">
+            <div class="mbr-section-head mb-5">
+              <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-5">
+                <strong>Expertos Jardinería</strong>
+              </h3>
+            </div>
           </div>
-          <div class="row">
-              <div class="item features-without-image col-12 col-md-6 active">
-                  <div class="item-wrapper">
-                      <div class="text-wrapper">
-                          <h6 class="card-title mbr-fonts-style mb-3 display-6">
-                              <strong>Teléfono</strong>
-                          </h6>
-                          <p class="mbr-text mbr-fonts-style display-7">
-                              <a href="tel:123-456-789" class="text-black">123-456-789</a>
-                          </p>
-                      </div>
-                  </div>
+        </div>
+        <div class="row">
+          <div class="items features-without-image col-12 col-md-6 active">
+            <div class="item-wrapper">
+              <div class="text-wrapper">
+                <h6 class="card-title mbr-fonts-style mb-3 display-6">
+                  <strong>Teléfono</strong>
+                </h6>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  <a href="tel:123-456-789" class="text-black">123-456-789</a>
+                </p>
               </div>
-              <div class="item features-without-image col-12 col-md-6">
-                  <div class="item-wrapper">
-                      <div class="text-wrapper">
-                          <h6 class="card-title mbr-fonts-style mb-3 display-6">
-                              <strong>Correo Electrónico</strong>
-                          </h6>
-                          <p class="mbr-text mbr-fonts-style display-7">
-                              <a href="mailto:info@plantafriendly.com" class="text-black">info@plantafriendly.com</a>
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="item features-without-image col-12 col-md-6">
-                  <div class="item-wrapper">
-                      <div class="text-wrapper">
-                          <h6 class="card-title mbr-fonts-style mb-3 display-6">
-                              <strong>Dirección</strong>
-                          </h6>
-                          <p class="mbr-text mbr-fonts-style display-7">
-                               CR 40 CLL 12-13/ Medellín
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="item features-without-image col-12 col-md-6">
-                  <div class="item-wrapper">
-                      <div class="text-wrapper">
-                          <h6 class="card-title mbr-fonts-style mb-3 display-6">
-                              <strong>Horario Atención</strong>
-                          </h6>
-                          <p class="mbr-text mbr-fonts-style display-7">
-                              Lun-Vie: 9am-6pm
-                          </p>
-                      </div>
-                  </div>
-              </div>
+            </div>
           </div>
-      </div>
-  </section>
-   <!--Seccion de redes sociales-footer-->
-  <section class="redes-sociales">
-    <h2>Síguenos en nuestras redes sociales</h2>
-    <ul class="redes-lista">
-      <li><a href="https://facebook.com" target="_blank"><img src="assets/img/facebook.png" alt="Facebook"></a></li>
-      <li><a href="https://twitter.com" target="_blank"><img src="assets/img/twitter.png" alt="Twitter"></a></li>
-      <li><a href="https://instagram.com" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a></li>
-    </ul>
-  </section>
-  <section class="footer" id="">
-    <div class="container">
-      <div class="media-container-row align-center mbr-white">
-        <div class="col-12">
-          <p class="mbr-text mb-0 mbr-fonts-style display-7" style="color: white; text-align: center;">
-            © 2024 PlantaFriendly. Todos los derechos reservados.
-          </p>
+          <div class="items features-without-image col-12 col-md-6">
+            <div class="item-wrapper">
+              <div class="text-wrapper">
+                <h6 class="card-title mbr-fonts-style mb-3 display-6">
+                  <strong>Correo Electrónico</strong>
+                </h6>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  <a href="mailto:info@plantafriendly.com" class="text-black">info@plantafriendly.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="items features-without-image col-12 col-md-6">
+            <div class="item-wrapper">
+              <div class="text-wrapper">
+                <h6 class="card-title mbr-fonts-style mb-3 display-6">
+                  <strong>Dirección</strong>
+                </h6>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  CR 40 CLL 12-13/ Medellín
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="items features-without-image col-12 col-md-6">
+            <div class="item-wrapper">
+              <div class="text-wrapper">
+                <h6 class="card-title mbr-fonts-style mb-3 display-6">
+                  <strong>Horario Atención</strong>
+                </h6>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  Lun-Vie: 9am-6pm
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-    </main> 
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    </section>
+    <!--Seccion de redes sociales-footer-->
+    <section class="redes-sociales">
+      <h2>Síguenos en nuestras redes sociales</h2>
+      <ul class="redes-lista">
+        <li><a href="https://facebook.com" target="_blank"><img src="assets/img/facebook.png" alt="Facebook"></a></li>
+        <li><a href="https://twitter.com" target="_blank"><img src="assets/img/twitter.png" alt="Twitter"></a></li>
+        <li><a href="https://instagram.com" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer" id="">
+      <div class="container">
+        <div class="media-container-row align-center mbr-white">
+          <div class="col-12">
+            <p class="mbr-text mb-0 mbr-fonts-style display-7" style="color: white; text-align: center;">
+              © 2024 PlantaFriendly. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+  <script src="js/main.js"></script>
+</body>
 </html>

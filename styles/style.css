@@ -43,6 +43,43 @@
     display: flex;
     align-items: center;
   }
+/* Estilos para el contenido del modal */
+.modal-content {
+  background-color: white !important; /*Se usa important para forzar el cambio de estilo en el bootstrap*/
+  border-radius: 10px !important;
+}
+
+/* Estilos para el encabezado del modal */
+.modal-header {
+  background-color: #f0f0f0 !important;
+  border-bottom: none !important;
+}
+
+/* Estilos para el cuerpo del modal */
+.modal-body {
+  padding: 20px !important;
+}
+
+/* Estilos para el pie del modal */
+.modal-footer {
+  background-color: #f0f0f0 !important;
+  border-top: none !important;
+}
+
+/* Estilos para el botón cerrar del modal */
+.modal-dialog {
+  margin-left: auto !important;
+  margin-right: 0px !important;
+  width: 30vw !important; 
+  height: 200vh !important;
+}
+.modal {
+  align-items: center !important;
+  justify-content: flex-end !important; 
+  height: 100vh !important;
+  
+}
+
   
   .search-icon {
     position: absolute;
@@ -60,15 +97,15 @@
     cursor: pointer; 
   }
   .form-control {
-    width: 100%; /* Ajustar el ancho para que ocupe todo el espacio disponible */
+    width: 100%; 
     text-indent: 20px;
   }
   .dropdown-menu.show .dropdown-item:active {
-    background-color: rgb(49, 99, 49); /* Cambia el color de fondo al hacer clic */
+    background-color: rgb(49, 99, 49); 
   }
   
   .navbar-nav .nav-item .nav-link:hover {
-    background-color: rgb(164, 218, 164); /* Cambia el color del texto */
+    background-color: rgb(164, 218, 164); 
     border-radius: 10px;
   }
   .navbar-nav  {
@@ -92,117 +129,109 @@
 }
 
 .foto-grupal {
-    /* estilos para la foto grupal */
-    text-align: center;
+  text-align: center;
 }
 
 .foto-grupal img {
-    /* tamaño de la foto grupal */
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-    margin: 5% auto 20px; /* margen inferior para separar la foto del texto */
+  /* tamaño de la foto grupal */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  margin: 5% auto 20px;
 }
 
 .texto h2 {
-    /* estilos para el título plantafriendly */
-    color: #2a492b;
-    font-size: 28px;
-    margin-bottom: 20px;
+  /* estilos para el título plantafriendly */
+  color: #2a492b;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
-
-.texto h3 {
-    /* estilos para los títulos 'Misión' y 'Visión' */
-    color: #2a492b;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
 .texto p {
-    /* estilos para los párrafos */
-    line-height: 1.6;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  /* estilos para los párrafos */
+  line-height: 2;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 /* Estilos para los eventos*/
 .eventos {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    background-color: #f7f6f6;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  background-color: #f7f6f6;
+  
   }
   .eventos img,
   .eventos .item-img {
-    width: 100%;
-    height: 100%;
-    height: 400px;
-    object-fit: cover;
-  }
-  
- 
+  width: 100%;
+  height: 100%;
+  height: 200px;
+  object-fit: cover;
+  } 
   .item-content h6 {
-    font-size: 1.2em; /* Ajusta el tamaño del título */
-    font-weight: bold; /* Hace que el título sea negrita */
-    margin-bottom: 10px; 
+  font-size: 1.2em; 
+  font-weight: bold; 
+  margin-bottom: 10px; 
 }
 .item-subtitle a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .item-content p {
-    font-size: 0.9em;
-    line-height: 1.5; 
-    margin-bottom: 10px; 
+  font-size: 0.9em;
+  line-height: 1.5; 
+  margin-bottom: 10px; 
 }
 .item-content {
-    padding-top: 5px; /* Margen superior */
-    padding-right: 10px; /* Margen derecho */
-    padding-bottom: 15px; /* Margen inferior */
-    padding-left: 15px; /* Margen izquierdo */
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-top: 5px;
+  padding-right: 10px; 
+  padding-bottom: 15px; 
+  padding-left: 15px; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .item-footer .btn {
-    background-color: #4CAF50; /* Cambia el color de fondo del botón */
-    color: white; /* Cambia el color del texto del botón */
-    border: none; /* Elimina el borde del botón */
-    padding: 10px 20px; /* Ajusta el espacio dentro del botón */
-    font-size: 0.9em; /* Ajusta el tamaño del texto del botón */
-    border-radius: 5px; /* Agrega bordes redondeados al botón */
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 0.9em; 
+  border-radius: 5px; 
 }
 .item {
-    border-radius: 5px;
-    box-shadow: 2px 2px 12px black;
-    text-align: center;
-    transition: all 0.25s;
+  border-radius: 5px;
+  box-shadow: 2px 2px 12px black;
+  text-align: center;
+  transition: all 0.25s;
+  margin-left: 75px;
 }
+
 .item:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 15px 18px black;
+  transform: translateY(-15px);
+  box-shadow: 0 15px 18px black;
 }
 
 .item-footer .btn:hover {
-    background-color: #45a049; /* Cambia el color de fondo del botón al pasar el mouse */
+  background-color: #45a049; 
 }
 
 /* Estilos para la sección de contactos */
 .contacts {
-    padding: 10px 0; /* Espaciado interior de la sección */
-    background-color: #79dd72; /* Color de fondo */
-    border-radius: 10px; /* Bordes redondeados para el cuadro */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    text-align: center; 
+  padding: 10px 0; 
+  background-color: #79dd72; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
 }
 
 .container {
-    max-width: 1000px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenedor en la página */
+    max-width: 1000px; 
+    margin: 0 auto; 
 }
 
 .content-head {
-    text-align: center; /* Centrar el contenido */
-    margin-bottom: 50px; /* Espaciado inferior */
+    text-align: center; 
+    margin-bottom: 50px; 
 }
 
 .card-title {
-    margin-bottom: 5px; /* Espaciado inferior del título */
+    margin-bottom: 5px;
 }
 .item-wrapper{
     background-color: white;
@@ -215,8 +244,8 @@
 }
 
 .mbr-text {
-    font-size: 18px; /* Tamaño de fuente del texto */
-    margin-bottom: 20x; /* Espaciado inferior del texto */
+    font-size: 18px; 
+    margin-bottom: 20x; 
 }
 
 .mbr-text a {
@@ -230,34 +259,34 @@
 
 /* Estilos para el footer*/
 .footer {
-    background-color: #000; /* Color de fondo negro */
-    color: #fff; /* Color del texto en blanco */
-    padding: 20px 0; /* Espaciado interior */
+    background-color: #000; 
+    color: #fff; 
+    padding: 20px 0; 
 }
 
 .footer .container {
-    text-align: center; /* Centrar el contenido */
+    text-align: center; 
 }
 
 
 /* Estilos para la sección de formulario */
 .formulario {
-    padding: 50px 0; /* Espaciado interior de la sección */
-    background-color: #f8f9fa; /* Color de fondo */
+    padding: 50px 0; 
+    background-color: #f8f9fa; 
 }
 
 .container {
-    max-width: 800px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenedor en la página */
+    max-width: 800px;
+    margin: 0 auto; 
 }
 
 .content-head {
-    text-align: center; /* Centrar el contenido */
-    margin-bottom: 30px; /* Espaciado inferior */
+    text-align: center; 
+    margin-bottom: 30px; 
 }
 
 .mbr-section-title {
-    font-size: 36px; /* Tamaño de fuente del título */
+    font-size: 36px; 
 }
 .formcampos{
     background-color: #79dd72;
@@ -269,36 +298,36 @@
 .mbr-form input[type="email"],
 .mbr-form input[type="url"],
 .mbr-form textarea {
-    width: 100%; /* Ancho completo del campo de entrada */
-    padding: 10px; /* Espaciado interior */
-    margin-bottom: 15px; /* Espaciado inferior */
-    border: 1px solid #ccc; /* Borde del campo de entrada */
-    border-radius: 8px; /* Radio de borde */
-    box-sizing: border-box; /* Box-sizing */
-    font-size: 16px; /* Tamaño de fuente */
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    font-size: 16px; 
 }
 
 .mbr-form textarea {
-    height: 100px; /* Altura del área de texto */
+    height: 100px; 
 }
 
 .mbr-section-btn {
-    text-align: center; /* Centrar botón */
+    text-align: center; 
 }
 
 .btn-success {
-    background-color: #4CAF50; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    padding: 15px 25px; /* Espaciado interior del botón */
-    border: none; /* Sin borde */
-    border-radius: 8px; /* Radio de borde */
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 15px 25px;
+    border: none; 
+    border-radius: 8px; 
     cursor: pointer; 
     font-size: 16px; 
     transition: background-color 0.3s ease; 
 }
 
 .btn-success:hover {
-    background-color: #45a049; /* Color de fondo del botón al pasar */
+    background-color: #45a049; 
 }
 /* Estilos de la seccion Redes Sociales*/
 
