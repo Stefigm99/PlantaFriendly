@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="icon" href="assets/img/planta.png" type="image/x-icon">
+
+  <title>Contacto PlantaFrienly</title>
+</head>
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg" id="custom-navbar">
+            <div class="container-fluid">
+              <img src="assets/img/planta.png" alt="" style="height: 3.3rem;">
+              <a class="navbar-brand" href="index.html" style="color: rgb(9, 73, 9);">PlantaFriendly</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="search-container">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                <img class="search-icon" src="assets/img/lupa.png" alt="">
+              </div>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Catálogo
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Semillas</a></li>
+                      <li><a class="dropdown-item" href="#">fertilizantes</a></li>
+                      <li><a class="dropdown-item" href="#">Herramientas</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#events">Eventos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#nosotros">Sobre Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#suscribe">Suscríbete</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Lo más vendido</a>
+                  </li>
+                </ul>
+              </div>
+              <div  id="iconoCarrito">
+              <img src="assets/img/carrito-de-compras.png" id="carr" alt="Carrito de compras" class="carrito-icon">
+            </div>
+            </div>
+          </nav>
+      <!-- Modal del carrito -->
+      <div class="modal" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-end">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Contenido del carrito -->
+              <p>Sin productos seleccionados</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-success">Realizar pedido</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="formulario" id="contact">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-5 content-head">
+              <div class="mbr-section-head mb-3">
+                <h3 class="mbr-section-title mbr-fonts-style align-center display-5">
+                  <strong>¡Dejanos tu mensaje!</strong>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class=" formcampos col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+              <form action="" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden"
+                  name="email" data-form-email="true" value="">
+                <div class="dragArea row">
+                  <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                    <input type="text" name="name" placeholder="Nombre" data-form-field="name" class="form-control"
+                      value="" id="name">
+                  </div>
+                  <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                    <input type="email" name="email" placeholder="Correo" data-form-field="email" class="form-control"
+                      value="" id="email">
+                  </div>
+                  <div class="col-12 form-group mb-3" data-for="telefono">
+                    <input type="url" name="url" placeholder="Teléfono" data-form-field="telefono" class="form-control"
+                      value="" id="telefono">
+                  </div>
+                  <div class="col-12 form-group mb-3" data-for="comentario">
+                    <textarea name="textarea" placeholder="Mensaje" data-form-field="comentario" class="form-control"
+                      id="comentario"></textarea>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit"
+                      class="btn btn-success display-7">Enviar</button></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+        <!--Seccion de contacto-->
+    <section class="contacts" id="contacts">
+        <div class="container">
+          <div class="row">
+            <div class="items features-without-image col-12 col-md-6 active">
+              <div class="item-wrapper">
+                <div class="text-wrapper">
+                  <h6 class="card-title mbr-fonts-style mb-3 display-6">
+                    <strong>Teléfono</strong>
+                  </h6>
+                  <p class="mbr-text mbr-fonts-style display-7">
+                    <a href="tel:123-456-789" class="text-black">123-456-789</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="items features-without-image col-12 col-md-6">
+              <div class="item-wrapper">
+                <div class="text-wrapper">
+                  <h6 class="card-title mbr-fonts-style mb-3 display-6">
+                    <strong>Correo Electrónico</strong>
+                  </h6>
+                  <p class="mbr-text mbr-fonts-style display-7">
+                    <a href="mailto:info@plantafriendly.com" class="text-black">info@plantafriendly.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="items features-without-image col-12 col-md-6">
+              <div class="item-wrapper">
+                <div class="text-wrapper">
+                  <h6 class="card-title mbr-fonts-style mb-3 display-6">
+                    <strong>Dirección</strong>
+                  </h6>
+                  <p class="mbr-text mbr-fonts-style display-7">
+                    CR 40 CLL 12-13/ Medellín
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="items features-without-image col-12 col-md-6">
+              <div class="item-wrapper">
+                <div class="text-wrapper">
+                  <h6 class="card-title mbr-fonts-style mb-3 display-6">
+                    <strong>Horario Atención</strong>
+                  </h6>
+                  <p class="mbr-text mbr-fonts-style display-7">
+                    Lun-Vie: 9am-6pm
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Seccion de redes sociales-footer-->
+    <section class="redes-sociales">
+        <h2>Síguenos en nuestras redes sociales</h2>
+        <ul class="redes-lista">
+          <li><a href="https://facebook.com" target="_blank"><img src="assets/img/facebook.png" alt="Facebook"></a></li>
+          <li><a href="https://twitter.com" target="_blank"><img src="assets/img/twitter.png" alt="Twitter"></a></li>
+          <li><a href="https://instagram.com" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer" id="">
+        <div class="container">
+          <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+              <p class="mbr-text mb-0 mbr-fonts-style display-7" style="color: white; text-align: center;">
+                © 2024 PlantaFriendly. Todos los derechos reservados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

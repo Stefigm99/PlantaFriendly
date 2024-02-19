@@ -1,48 +1,48 @@
 /*estilos para el carrusel*/
 .carousel-item img {
-    max-height: 600px; 
-    width: auto;
-    margin: 0 auto; 
+  max-height: 600px; 
+  width: auto;
+  margin: 0 auto; 
 }
 .carousel-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
 }
 
 .carousel-caption {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    padding: 20px 20px 0 130px; 
-    color: white; 
-    transform: translateX(-50%);
-    z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 20px 20px 0 130px; 
+  color: white; 
+  transform: translateX(-50%);
+  z-index: 2;
 }
 /*Estilo de barra de navegacion*/
 #custom-navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; 
-    background-color: #f5f0e0; 
-    padding: 10px 20px; 
-    font-family:Georgia, 'Times New Roman', Times, serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+  background-color: #f5f0e0; 
+  padding: 10px 20px; 
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .navbar-brand {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .search-container {
-    position: relative;
-    width: 25%;
-    display: flex;
-    align-items: center;
-  }
+  position: relative;
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
 /* Estilos para el contenido del modal */
 .modal-content {
   background-color: white !important; /*Se usa important para forzar el cambio de estilo en el bootstrap*/
@@ -81,46 +81,46 @@
 }
 
   
-  .search-icon {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: auto; 
-    cursor: pointer;
-    order: 1;
-  }
-  .carrito-icon {
-    height: 2rem; 
-    margin-left: 10px; 
-    cursor: pointer; 
-  }
-  .form-control {
-    width: 100%; 
-    text-indent: 20px;
-  }
-  .dropdown-menu.show .dropdown-item:active {
-    background-color: rgb(49, 99, 49); 
-  }
-  
-  .navbar-nav .nav-item .nav-link:hover {
-    background-color: rgb(164, 218, 164); 
-    border-radius: 10px;
-  }
-  .navbar-nav  {
-    margin-left: 50px; 
-  }
-  .form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(5, 109, 9, 0.25) !important; 
-    border-color: #99e39c !important;
-  }
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: auto; 
+  cursor: pointer;
+  order: 1;
+}
+.carrito-icon {
+  height: 2rem; 
+  margin-left: 10px; 
+  cursor: pointer; 
+}
+.form-control {
+  width: 100%; 
+  text-indent: 20px;
+}
+.dropdown-menu.show .dropdown-item:active {
+  background-color: rgb(49, 99, 49); 
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: rgb(164, 218, 164); 
+  border-radius: 10px;
+}
+.navbar-nav  {
+  margin-left: 50px; 
+}
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(5, 109, 9, 0.25) !important; 
+  border-color: #99e39c !important;
+}
   
 /* estilos generales */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* estilos para la sección sobre nosotros */
@@ -154,7 +154,7 @@
 }
 /* Estilos para los eventos*/
 .eventos {
-  padding-top: 6rem;
+  padding-top: 0;
   padding-bottom: 2rem;
   background-color: #f7f6f6;
   
@@ -221,179 +221,276 @@
 }
 
 .container {
-    max-width: 1000px; 
-    margin: 0 auto; 
+  max-width: 1000px; 
+  margin: 0 auto; 
 }
 
 .content-head {
-    text-align: center; 
-    margin-bottom: 50px; 
+  text-align: center; 
+  margin-bottom: 50px; 
 }
 
-.card-title {
-    margin-bottom: 5px;
-}
 .item-wrapper{
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 5px 0 5px 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 5px 0 5px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
 }
 
 .mbr-text {
-    font-size: 18px; 
-    margin-bottom: 20x; 
+  font-size: 18px; 
+  margin-bottom: 20x; 
 }
 
 .mbr-text a {
-    color: #333; 
-    text-decoration: none; 
+  color: #333; 
+  text-decoration: none; 
 }
 
 .mbr-text a:hover {
-    text-decoration: underline; 
+  text-decoration: underline; 
 }
 
 /* Estilos para el footer*/
 .footer {
-    background-color: #000; 
-    color: #fff; 
-    padding: 20px 0; 
+  background-color: #000; 
+  color: #fff; 
+  padding: 20px 0; 
 }
 
 .footer .container {
-    text-align: center; 
+  text-align: center; 
 }
 
 
 /* Estilos para la sección de formulario */
 .formulario {
-    padding: 50px 0; 
-    background-color: #f8f9fa; 
+  padding: 50px 0; 
+  background-color: #ffffff; 
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto; 
+  max-width: 800px;
+  margin: 0 auto; 
 }
 
 .content-head {
-    text-align: center; 
-    margin-bottom: 30px; 
+  text-align: center; 
+  margin-bottom: 30px; 
 }
 
 .mbr-section-title {
-    font-size: 36px; 
+  font-size: 36px; 
+  margin-top: 30px;
 }
 .formcampos{
-    background-color: #79dd72;
-    padding: 20px 0 10px;
-    border-radius: 20px;
+  background-color: #e5ddc3;
+  padding: 20px 0 10px;
+  border-radius: 20px;
+  border-style:ridge;
 }
 
 .mbr-form input[type="text"],
 .mbr-form input[type="email"],
 .mbr-form input[type="url"],
 .mbr-form textarea {
-    width: 100%; 
-    padding: 10px; 
-    margin-bottom: 15px;
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    box-sizing: border-box; 
-    font-size: 16px; 
+  width: 100%; 
+  padding: 10px; 
+  margin-bottom: 15px;
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  box-sizing: border-box; 
+  font-size: 16px; 
 }
 
 .mbr-form textarea {
-    height: 100px; 
+  height: 100px; 
 }
 
 .mbr-section-btn {
-    text-align: center; 
+  text-align: center; 
 }
 
 .btn-success {
-    background-color: #4CAF50; 
-    color: white; 
-    padding: 15px 25px;
-    border: none; 
-    border-radius: 8px; 
-    cursor: pointer; 
-    font-size: 16px; 
-    transition: background-color 0.3s ease; 
+  background-color: #4CAF50; 
+  color: white; 
+  padding: 15px 25px;
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: background-color 0.3s ease; 
 }
 
 .btn-success:hover {
-    background-color: #45a049; 
+  background-color: #45a049; 
 }
 /* Estilos de la seccion Redes Sociales*/
 
 .redes-sociales {
-    text-align: center;
-    margin: 50px auto;
-  }
-  
-  .redes-sociales h2 {
-    font-size: 24px;
-  }
-  
-  .redes-lista {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .redes-lista li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  .redes-lista li img {
-    width: 40px;
-    height: 40px;
-  }
-  /* Estilos de la seccion Equipo*/
-  .equipo {
-    text-align: center;
-    margin: 50px auto;
-    padding: 10px 0 10px;
-  }
-  
-  .equipo h3 {
-    font-size: 50px;
-  }
-  
-  .equipo-lista {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .equipo-lista li {
-    display: inline-block;
-    margin: 0 10px;
-    text-align: center;
-  }
-  
-  .equipo-lista li img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-  
-  .miembro-info {
-    margin-top: 10px;
-  }
-  
-  .miembro-info h4 {
-    margin: 5px 0;
-    font-size: 25px;
-  }
-  
-  .miembro-info img {
-    width: 30px;
-    height: 30px;
-  }
-  
+  text-align: center;
+  margin: 10px auto;
+}
 
+.redes-sociales h2 {
+  font-size: 24px;
+}
+
+.redes-lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+.redes-lista li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.redes-lista li img {
+  width: 40px;
+  height: 40px;
+}
+/* Estilos de la seccion Equipo*/
+.equipo {
+  text-align: center;
+  margin-top: 0;
+  padding: 1px 0 10px;
+}
+
+.equipo h3 {
+  font-size: 40px;
+}
+
+.equipo-lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+.equipo-lista li {
+  display: inline-block;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.equipo-lista li img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.miembro-info {
+  margin-top: 10px;
+}
+
+.miembro-info h4 {
+  margin: 5px 0;
+  font-size: 25px;
+}
+
+.miembro-info img {
+  width: 30px;
+  height: 30px;
+}
+/* Estilos de la seccion Suscribe*/
+.subscribe-section {
+  text-align: center;
+  background-color: #f5f0e0; 
+  padding: 20px;
+}
+
+.subscribe-form {
+  margin-top: 20px;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background-color: #45a049;
+}
+
+.catalogo-container {
+  padding: 20px;
+}
+
+.subtitle {
+  margin-left: 20px; 
+}
+
+.card {
+  margin-bottom: 20px;
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.card-body {
+  text-align: left;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.card-text {
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.card-img-top {
+  max-width: 100%;
+  height: 300px;
+}
+.card-body button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-body button:hover {
+  background-color: #45a049;
+}
+
+.list-group {
+  list-style: none; 
+  padding-left: 0; 
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-group-item img {
+  max-width: 50px;
+}
+
+.eliminar-icon {
+  color: red;
+  cursor: pointer;
+}
