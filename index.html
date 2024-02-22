@@ -26,12 +26,8 @@
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="search-container">
-          <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
-          <img class="search-icon" src="assets/icons/lupa.png" alt="">
-        </div>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Cambio aquí: agregué la clase 'ms-auto' para mover el navbar a la derecha -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#catalogo" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -55,10 +51,10 @@
               <a class="nav-link" href="/pages/contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/dasboardDatos.html">Lo más vendido</a>
+              <a class="nav-link" href="#">Lo más vendido</a>
             </li>
           </ul>
-        </div>
+        </div>        
         <div id="iconoCarrito">
           <img src="assets/icons/carrito-de-compras.png" id="carr" alt="Carrito de compras" class="carrito-icon">
           <span id="cantidadCarrito" class="badge bg-success">0</span>
@@ -101,40 +97,38 @@
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
             aria-label="Slide 4"></button>
         </div>
+
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="5000">
-            <img src="assets/img/carrusel.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Servicios de jardinería</h1>
-              <h5>Descubre los servicios que tenemos preparados para ti.</h5>
-              <button class="btn btn-outline-light">Ver más</button>
-            </div>
+              <img src="assets/img/carrusel.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>Un mundo más verde</h1>
+                  <h5>¡Cuidar de nuestro planeta es construir un futuro mejor para todos!</h5>
+              </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="assets/img/carrusel2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Consejos de Cuidado: </h1>
-              <h5>Mantén tus Plantas Felices y Saludables.</h5>
-              <button class="btn btn-outline-light">Ver más</button>
-            </div>
+              <img src="assets/img/carrusel2.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>Belleza natural</h1>
+                  <h5>Descubre la magia de la naturaleza y aprende a protegerla.</h5>
+              </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="assets/img/carrusel3.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Herramientas de Jardinería </h1>
-              <h5>Equípate para el Éxito en tu Jardín.</h5>
-              <button class="btn btn-outline-light">Ver más</button>
-            </div>
+              <img src="assets/img/carrusel3.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>Conciencia y armonía</h1>
+                  <h5>¡Cada pequeño gesto cuenta! Juntos podemos hacer la diferencia!</h5>
+              </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="assets/img/carrusel4.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Diseño de Paisajes </h1>
-              <h5>Transforma tu Patio en un Paraíso Verde.</h5>
-              <button class="btn btn-outline-light">Ver más</button>
-            </div>
+              <img src="assets/img/carrusel4.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>Un futuro brillante</h1>
+                  <h5>¡Imagina un mundo donde la naturaleza florezca y todos vivamos en armonía con ella!</h5>
+              </div>
           </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
           data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -147,7 +141,6 @@
         </button>
       </div>
     </section>
-
     <!--Seccion sobre nosotros con la informacion de la empresa-->
     <section class="sobre-nosotros" id="nosotros">
       <div class="container">
@@ -593,6 +586,8 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+
+  
 </body>
 
 </html>
