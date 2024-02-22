@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/styles/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="icon" href="/assets/icons/planta.png" type="image/x-icon">
+
+  <title>Graficas PlantaFrienly</title>
+</head>
+
+<body background="/assets/img/fondo.jpg" style="background-size: cover; background-repeat: no-repeat;">
+  <main>
+    <nav class="navbar navbar-expand-lg" id="custom-navbar">
+      <div class="container-fluid">
+        <img src="/assets/icons/planta.png" alt="" style="height: 3.3rem;">
+        <a class="navbar-brand" href="/index.html" style="color: rgb(9, 73, 9);">PlantaFriendly</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="search-container">
+          <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+          <img class="search-icon" src="/assets/icons/lupa.png" alt="">
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Catálogo
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/index.html#semillas">Semillas</a></li>
+                <li><a class="dropdown-item" href="/index.html#fertilizantes">fertilizantes</a></li>
+                <li><a class="dropdown-item" href="/index.html#herramientas">Herramientas</a></li>
+                <li><a class="dropdown-item" href="/index.html#herramientas">Sustratos</a></li>
+                <li><a class="dropdown-item" href="/index.html#herramientas">Aromáticas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#tutoriales">Tutoriales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#nosotros">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lo más vendido</a>
+            </li>
+          </ul>
+        </div>
+        <div id="iconoCarrito">
+          <img src="/assets/icons/carrito-de-compras.png" id="carr" alt="Carrito de compras" class="carrito-icon">
+        </div>
+      </div>
+    </nav>
+    <!-- Modal del carrito -->
+    <div class="modal" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-end">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Contenido del carrito -->
+            <p>Sin productos seleccionados</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-success">Realizar pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div id="graficas">
+        <div class="row my-5 text-center">
+          <h1 class="mbr-section-title mb-4 display-6">
+            <strong>Registros de Productos mas Vendidos</strong>
+          </h1>
+          <div class="col-6 border border-end shadow">
+            <h3 style="color: #b2a839;">Estadísticas</h3>
+
+            <div class="my-4">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="ventasSemillas" data-bs-toggle="tab"
+                    data-bs-target="#ventasSemillas-tab-pane" type="button" role="tab"
+                    aria-controls="ventasSemillas-tab-pane" aria-selected="true">
+                    Semillas
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="ventaFertilizantes" data-bs-toggle="tab"
+                    data-bs-target="#ventaFertilizantes-tab-pane" type="button" role="tab"
+                    aria-controls="ventaFertilizantes-tab-pane" aria-selected="false">
+                    Fertilizantes
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="ventaSustratos" data-bs-toggle="tab"
+                    data-bs-target="#ventaSustratos-tab-pane" type="button" role="tab"
+                    aria-controls="ventaSustratos-tab-pane" aria-selected="false">
+                    Sustratos
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="ventaHerramientas" data-bs-toggle="tab"
+                    data-bs-target="#ventaHerramientas-tab-pane" type="button" role="tab"
+                    aria-controls="ventaHerramientas-tab-pane" aria-selected="false">
+                    Herramientas
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="ventaAromaticas" data-bs-toggle="tab"
+                    data-bs-target="#ventaAromaticas-tab-pane" type="button" role="tab"
+                    aria-controls="ventaAromaticas-tab-pane" aria-selected="false">
+                    Aromáticas
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="ventasSemillas-tab-pane" role="tabpanel"
+                  aria-labelledby="home-tab" tabindex="0">
+                  <img src="/graphs/promedioSemillas.png" alt="grafica" class="icons-fluid w-100">
+                </div>
+                <div class="tab-pane fade" id="ventaFertilizantes-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <img src="/graphs/promedioFertilizantes.png" alt="grafica" class="icons-fluid w-100">
+                </div>
+                <div class="tab-pane fade" id="ventaSustratos-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <img src="/graphs/promedioSustratos.png" alt="grafica" class="icons-fluid w-100">
+                </div>
+                <div class="tab-pane fade" id="ventaHerramientas-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <img src="/graphs/promedioHerramientas.png" alt="grafica" class="icons-fluid w-100">
+                </div>
+                <div class="tab-pane fade" id="ventaAromaticas-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <img src="/graphs/promedioAromaticas.png" alt="grafica" class="icons-fluid w-100">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Seccion de contacto-->
+    <footer>
+      <div class="container">
+        <div class="logo">
+          <img src="/assets/icons/planta.png" alt="Logo de la Tienda de Jardinería">
+          <a class="navbar-brand" href="index.html"
+            style="color: rgb(255, 255, 255); font-size: 26px;">PlantaFriendly</a>
+        </div>
+        <div class="contact-info">
+          <h4>Contacto</h4>
+          <p><img src="/assets/icons/direccion.png" style="height: 1.2rem; margin-right: 2px;"  alt="Icono de dirección"> Dirección: Medellín, Colombia</p>
+          <p><img src="/assets/icons/telefono.png" style="height: 1.1rem; margin-right: 4px;"alt="Icono de teléfono">Teléfono: <a href="tel:123-456-789" class="text-white">123-456-789</a></p>
+          <p><img src="/assets/icons/correo-electronico.png" style="height: 1rem; margin-right: 4px;" alt="Icono de correo electrónico">Correo electrónico: <a href="mailto:info@plantafriendly.com" class="text-white">info@plantafriendly.com</a>
+          </p>
+          <p><img src="/assets/icons/calendario.png" style="height: 1rem; margin-right: 4px;"alt="Icono de horario">Horario de atención: Lunes a Viernes de 9am a 6pm</p>
+        </div>
+        <div class="quick-links">
+          <h4>Enlaces rápidos</h4>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="redes-lista">
+          <h4>Síguenos en redes sociales</h4>
+          <ul>
+            <li><a href="https://facebook.com" target="_blank"><img src="/assets/icons/facebook.png" alt="Facebook"></a>
+            </li>
+            <li><a href="https://twitter.com" target="_blank"><img src="/assets/icons/twitter.png" alt="Twitter"></a></li>
+            <li><a href="https://instagram.com" target="_blank"><img src="/assets/icons/instagram.png" alt="Instagram"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2024 PlantaFriendly. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

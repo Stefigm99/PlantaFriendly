@@ -1,0 +1,3 @@
+from analysis.analysisDeVentas import analizarRegistroVentas
+
+analizarRegistroVentas()

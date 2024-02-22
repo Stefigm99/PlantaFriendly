@@ -78,9 +78,7 @@
   justify-content: flex-end !important; 
   height: 100vh !important;
   
-}
-
-  
+} 
 .search-icon {
   position: absolute;
   top: 50%;
@@ -152,7 +150,7 @@
   line-height: 2;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-/* Estilos para los eventos*/
+/* Estilos para Seccion de Tutoriales*/
 .eventos {
   padding-top: 0;
   padding-bottom: 2rem;
@@ -211,70 +209,16 @@
   background-color: #45a049; 
 }
 
-/* Estilos para la sección de contactos */
-.contacts {
-  padding: 10px 0; 
-  background-color: #79dd72; 
-  border-radius: 10px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-  text-align: center; 
-}
-
-.container {
-  max-width: 1000px; 
-  margin: 0 auto; 
-}
-
-.content-head {
-  text-align: center; 
-  margin-bottom: 50px; 
-}
-
-.item-wrapper{
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 5px 0 5px 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  
-}
-
-.mbr-text {
-  font-size: 18px; 
-  margin-bottom: 20x; 
-}
-
-.mbr-text a {
-  color: #333; 
-  text-decoration: none; 
-}
-
-.mbr-text a:hover {
-  text-decoration: underline; 
-}
-
-/* Estilos para el footer*/
-.footer {
-  background-color: #000; 
-  color: #fff; 
-  padding: 20px 0; 
-}
-
-.footer .container {
-  text-align: center; 
-}
-
-
 /* Estilos para la sección de formulario */
 .formulario {
   padding: 50px 0; 
-  background-color: #ffffff; 
+   
 }
 
-.container {
-  max-width: 800px;
+.containerForm {
+  
   margin: 0 auto; 
+  height: auto
 }
 
 .content-head {
@@ -285,6 +229,7 @@
 .mbr-section-title {
   font-size: 36px; 
   margin-top: 30px;
+  text-align: center;
 }
 .formcampos{
   background-color: #e5ddc3;
@@ -328,31 +273,6 @@
 .btn-success:hover {
   background-color: #45a049; 
 }
-/* Estilos de la seccion Redes Sociales*/
-
-.redes-sociales {
-  text-align: center;
-  margin: 10px auto;
-}
-
-.redes-sociales h2 {
-  font-size: 24px;
-}
-
-.redes-lista {
-  list-style-type: none;
-  padding: 0;
-}
-
-.redes-lista li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.redes-lista li img {
-  width: 40px;
-  height: 40px;
-}
 /* Estilos de la seccion Equipo*/
 .equipo {
   text-align: center;
@@ -394,38 +314,7 @@
   width: 30px;
   height: 30px;
 }
-/* Estilos de la seccion Suscribe*/
-.subscribe-section {
-  text-align: center;
-  background-color: #f5f0e0; 
-  padding: 20px;
-}
-
-.subscribe-form {
-  margin-top: 20px;
-}
-
-.subscribe-form input[type="email"] {
-  padding: 10px;
-  width: 250px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.subscribe-form button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.subscribe-form button:hover {
-  background-color: #45a049;
-}
-
+/* Estilos de la seccion Catalogo*/
 .catalogo-container {
   padding: 20px;
 }
@@ -493,4 +382,142 @@
 .eliminar-icon {
   color: red;
   cursor: pointer;
+}
+/* Estilos de la seccion de Graficas*/
+#graficas {
+  text-align: center; /* Centra el contenido de la sección */
+}
+
+#graficas .my-5.text-center {
+  margin-bottom: 50px; /* Ajusta el margen inferior del título */
+}
+
+#graficas .col-6.border.shadow {
+  margin-left: auto; 
+  margin-right: auto;
+  background-color: #b6e2bd;
+  border-radius: 30px;
+}
+#graficas .mbr-section-title {
+  margin-top: 40px; 
+  background-color: #0808084f;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #fffdfd;
+  
+}
+#graficas .nav-link {
+  color: #0f4805; /
+}
+
+/*Footer*/
+footer {
+  background-color: #174c21;
+  color: #fff;
+  padding-top: 10px;
+  border-radius: 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo img {
+  width: 40%;
+  max-width: 200px; /* Ajusta el tamaño máximo del logo según tus necesidades */
+}
+
+.contact-info, .quick-links, .social-links {
+  flex: 1;
+}
+
+.contact-info h4, .quick-links h4, .redes-lista h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info ul, .quick-links ul, .social-links ul {
+  list-style-type: none;
+  padding: 0;text-align: center;
+}
+
+.contact-info ul li, .quick-links ul li {
+  margin-bottom: 5px;
+  
+}
+
+.quick-links ul li a{
+  text-decoration: none;
+  color: white;
+}
+.social-links ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-links ul li {
+  display: inline;
+}
+
+.social-links ul li:last-child {
+  margin-right: 0;
+}
+
+.social-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Sección de derechos de autor */
+.copyright {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+  padding: 10px 0;
+}
+.copyright p {
+  margin: 0;
+  color: #fff;
+}
+/* Estilos de la seccion Redes Sociales*/
+
+.redes-sociales {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.redes-sociales h2 {
+  font-size: 24px;
+}
+
+.redes-lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+.redes-lista li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.redes-lista li img {
+  width: 40px;
+  height: 40px;
+}
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; /* Distancia desde el borde inferior */
+  right: 20px; /* Distancia desde el borde derecho */
+  z-index: 999; /* Asegura que el icono esté por encima de otros elementos */
+}
+
+.whatsapp-icon img {
+  width: 60px; /* Ajusta el tamaño del icono según sea necesario */
+  height: auto;
 }

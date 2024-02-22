@@ -1,0 +1,76 @@
+Ticket,Nombre,Precio,Categoria,Fecha ,Ventas
+76,Abarco,2500,Semillas,21/02/2024,100
+108,Achiote,8000,Semillas,19/01/2024,500
+52,Cucharo,1400,Semillas,15/12/2023,200
+195,Dividivi,2500,Semillas,12/11/2023,800
+83,Estropajo,11000,Semillas,9/10/2023,250
+163,Eucalipto,3600,Semillas,5/09/2023,820
+217,Hayuelo,18000,Semillas,2/08/2023,900
+94,Jazmin,13000,Semillas,30/07/2023,800
+142,Higuerilla,7500,Semillas,25/06/2023,300
+235,Igu�,2500,Semillas,22/05/2023,320
+120,Melina,3000,Semillas,18/04/2023,400
+89,Morti�o,5000,Semillas,15/03/2023,380
+177,Orejero,2500,Semillas,10/02/2023,450
+241,Ocobo,6200,Semillas,7/01/2023,420
+63,Moringa,35000,Semillas,4/12/2022,500
+132,Micorrizar,6500,Fertilizantes,1/11/2022,480
+81,Neemazal,23500,Fertilizantes,28/09/2022,500
+189,Orbiagro,31000,Fertilizantes,25/08/2022,520
+239,Insecticida,23500,Fertilizantes,22/07/2022,600
+117,Humus,5000,Fertilizantes,18/06/2022,580
+74,Vermicompost,26000,Fertilizantes,15/05/2022,509
+158,Florescencia,7600,Fertilizantes,11/04/2022,200
+216,Hormonagro,33000,Fertilizantes,8/03/2022,700
+99,Lombricompuesto,5000,Fertilizantes,3/02/2022,680
+182,Urea,13000,Fertilizantes,1/01/2022,750
+250,Dinamik-7,110000,Fertilizantes,28/11/2021,720
+128,Biotapro,14000,Fertilizantes,25/10/2021,800
+68,Nutrimins,7800,Fertilizantes,21/09/2021,400
+146,Organigran,13000,Fertilizantes,18/08/2021,850
+78,Nitorganic,19500,Fertilizantes,15/07/2021,820
+203,Fumigadora,425000,Herramientas,11/06/2021,600
+110,Regadera,43000,Herramientas,8/05/2021,380
+55,Hidrokeeper,66000,Herramientas,4/04/2021,500
+198,Hydrosorb,37500,Herramientas,2/03/2021,250
+91,Racor metalico,7000,Herramientas,28/01/2021,100
+171,Vermicompost,26000,Herramientas,25/12/2020,700
+228,Abrazadera,3000,Herramientas,21/11/2020,540
+105,Nebulizador,80000,Herramientas,18/10/2020,200
+154,Manguera,50000,Herramientas,14/09/2020,100
+234,Cinta de goteo,4000,Herramientas,11/08/2020,700
+126,Goteros,5000,Herramientas,8/07/2020,500
+60,Rastrillo,20000,Herramientas,4/06/2020,400
+140,Guantes,5000,Herramientas,1/05/2020,600
+82,Carretilla,35000,Herramientas,28/03/2020,700
+174,Tijeras de podar,15000,Herramientas,24/02/2020,500
+232,Turba pindstrup,305000,Sustratos,21/01/2020,400
+123,Turba peat,259000,Sustratos,18/12/2019,600
+71,Sustracoco,66500,Sustratos,14/11/2019,280
+160,Cocopower,64260,Sustratos,11/10/2019,350
+226,Micorrizar,52200,Sustratos,7/09/2019,320
+101,Orbiagro,31000,Sustratos,4/08/2019,400
+149,Forza mix,23000,Sustratos,1/07/2019,680
+244,Perlita natural,38000,Sustratos,28/05/2019,500
+134,Corteza de pino,45000,Sustratos,24/04/2019,720
+72,Grava,23000,Sustratos,21/03/2019,690
+162,Lana de roca,365000,Sustratos,16/02/2019,548
+227,Arena,7000,Sustratos,13/01/2019,755
+115,Aserrin,5000,Sustratos,10/12/2018,952
+59,Bagazo de ca�a,138000,Sustratos,6/11/2018,160
+150,Compo sana,16000,Sustratos,3/10/2018,658
+220,Hierbabuena,15000,Aromaticas,29/09/2018,165
+97,Lavanda,18000,Aromaticas,25/08/2018,780
+169,Menta,15000,Aromaticas,22/07/2018,500
+238,Curcuma,25000,Aromaticas,18/06/2018,900
+121,Aloe vera,23000,Aromaticas,15/05/2018,175
+66,Albahaca,15000,Aromaticas,11/04/2018,890
+153,Manzanilla,15000,Aromaticas,8/03/2018,500
+211,Tomillo,15000,Aromaticas,3/02/2018,340
+109,Ruda,13000,Aromaticas,1/01/2018,580
+56,Tabaco,94000,Aromaticas,28/11/2017,790
+143,Incienso,5000,Aromaticas,25/10/2017,600
+189,Cedrón,16300,Aromaticas,26/10/2017,560
+113,Francés,21300,Aromaticas,27/10/2017,500
+65,Oregano,17500,Aromaticas,28/10/2017,894
+157,Ayahuasca,95000,Aromaticas,29/10/2017,290
