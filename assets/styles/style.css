@@ -19,10 +19,13 @@
   position: absolute;
   top: 50%;
   left: 0;
+  right: 0;
   padding: 20px 20px 0 130px; 
   color: white; 
-  transform: translateX(-50%);
+  transform: translateX(-7%); 
   z-index: 2;
+  text-align: justify;
+  text-transform:uppercase;
 }
 /*Estilo de barra de navegacion*/
 #custom-navbar {
@@ -212,6 +215,7 @@
 /* Estilos para la sección de formulario */
 .formulario {
   padding: 50px 0; 
+  margin-top: 50px;
    
 }
 
@@ -229,6 +233,7 @@
 .mbr-section-title {
   font-size: 36px; 
   margin-top: 30px;
+  margin-bottom: 50px;
   text-align: center;
 }
 .formcampos{
