@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(12, 14, 12, 0.555); 
   z-index: 1;
 }
 
@@ -19,11 +19,15 @@
   position: absolute;
   top: 50%;
   left: 0;
+  right: 0;
   padding: 20px 20px 0 130px; 
   color: white; 
-  transform: translateX(-50%);
+  transform: translateX(-7%); /*Para mover h1 y h5 al centro*/
   z-index: 2;
+  text-align: justify;
+  text-transform:uppercase /*Letra en mayuscualas*/
 }
+
 /*Estilo de barra de navegacion*/
 #custom-navbar {
   position: fixed;
@@ -80,7 +84,7 @@
   
 }
 
-  
+
 .search-icon {
   position: absolute;
   top: 50%;
@@ -109,8 +113,10 @@
   border-radius: 10px;
 }
 .navbar-nav  {
-  margin-left: 50px; 
+  margin-left: 50px;
+   
 }
+
 .form-control:focus {
   box-shadow: 0 0 0 0.2rem rgba(5, 109, 9, 0.25) !important; 
   border-color: #99e39c !important;
@@ -494,3 +500,4 @@
   color: red;
   cursor: pointer;
 }
+
