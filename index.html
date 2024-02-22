@@ -22,12 +22,9 @@
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="search-container">
-          <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
-          <img class="search-icon" src="assets/img/lupa.png" alt="">
-        </div>
+
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Cambio aquí: agregué la clase 'ms-auto' para mover el navbar a la derecha -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#catalogo" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -49,13 +46,11 @@
               <a class="nav-link" href="contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#suscribe">Suscríbete</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#">Lo más vendido</a>
             </li>
           </ul>
-        </div>
+        </div>        
+
         <div id="iconoCarrito">
           <img src="assets/img/carrito-de-compras.png" id="carr" alt="Carrito de compras" class="carrito-icon">
           <span id="cantidadCarrito" class="badge bg-success">0</span>
@@ -98,40 +93,38 @@
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
             aria-label="Slide 4"></button>
         </div>
+
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="5000">
-            <img src="assets/img/carrusel.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Servicios de jardinería</h1>
-              <h5>Descubre los servicios que tenemos preparados para ti.</h5>
-              <button class="btn btn-outline-light">Ver más</button>
-            </div>
+              <img src="assets/img/carrusel.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>Un mundo más verde</h1>
+                  <h5>¡Cuidar de nuestro planeta es construir un futuro mejor para todos!</h5>
+              </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="assets/img/carrusel2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Consejos de Cuidado: </h1>
-              <h5>Mantén tus Plantas Felices y Saludables.</h5>
-              <button class="btn btn-outline-light">Ver más</button>
-            </div>
+              <img src="assets/img/carrusel2.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>Belleza natural</h1>
+                  <h5>Descubre la magia de la naturaleza y aprende a protegerla.</h5>
+              </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="assets/img/carrusel3.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Herramientas de Jardinería </h1>
-              <h5>Equípate para el Éxito en tu Jardín.</h5>
-              <button class="btn btn-outline-light">Ver más</button>
-            </div>
+              <img src="assets/img/carrusel3.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>Conciencia y armonía</h1>
+                  <h5>¡Cada pequeño gesto cuenta! Juntos podemos hacer la diferencia!</h5>
+              </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-            <img src="assets/img/carrusel4.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Diseño de Paisajes </h1>
-              <h5>Transforma tu Patio en un Paraíso Verde.</h5>
-              <button class="btn btn-outline-light">Ver más</button>
-            </div>
+              <img src="assets/img/carrusel4.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>Un futuro brillante</h1>
+                  <h5>¡Imagina un mundo donde la naturaleza florezca y todos vivamos en armonía con ella!</h5>
+              </div>
           </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
           data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -182,7 +175,8 @@
               <h5 class="card-title">Abarco</h5>
               <p class="card-text">100gr de semillas</p>
               <p class="card-text" style="font-weight: bold;">Precio: $2500</p>
-              <button type="submit" id="botonSemillaAbarco" onclick="agregarAlCarrito('Abarco', 2500)">Añadir al carrito</button>
+              <button type="submit" id="botonSemillaAbarco" onclick="agregarAlCarrito('Abarco', 2500)">Añadir al
+                carrito</button>
             </div>
           </div>
         </div>
@@ -193,7 +187,8 @@
               <h5 class="card-title">Jazmin</h5>
               <p class="card-text">150gr de semillas</p>
               <p class="card-text" style="font-weight: bold;">Precio: $4000</p>
-              <button type="submit" id="botonSemillaJazmin" onclick="agregarAlCarrito('Jazmin', 4000)">Añadir al carrito</button>
+              <button type="submit" id="botonSemillaJazmin" onclick="agregarAlCarrito('Jazmin', 4000)">Añadir al
+                carrito</button>
             </div>
           </div>
         </div>
@@ -204,7 +199,8 @@
               <h5 class="card-title">Achiote</h5>
               <p class="card-text">150gr de semillas</p>
               <p class="card-text" style="font-weight: bold;">Precio: $5000</p>
-              <button type="submit" id="botonSemillaAchiote" onclick="agregarAlCarrito('Achiote', 5000)">Añadir al carrito</button>
+              <button type="submit" id="botonSemillaAchiote" onclick="agregarAlCarrito('Achiote', 5000)">Añadir al
+                carrito</button>
             </div>
           </div>
         </div>
@@ -215,7 +211,8 @@
               <h5 class="card-title">Hauyelo</h5>
               <p class="card-text">170gr de semillas</p>
               <p class="card-text" style="font-weight: bold;">Precio: $6000</p>
-              <button type="submit" id="botonSemillaHauyelo" onclick="agregarAlCarrito('Hauyelo', 6000)">Añadir al carrito</button>
+              <button type="submit" id="botonSemillaHauyelo" onclick="agregarAlCarrito('Hauyelo', 6000)">Añadir al
+                carrito</button>
             </div>
           </div>
         </div>
@@ -229,7 +226,8 @@
               <h5 class="card-title">Orbiagro</h5>
               <p class="card-text">Descripción del producto.</p>
               <p class="card-text" style="font-weight: bold;">Precio: $23500</p>
-              <button type="submit" id="botonSemillaOrbiagro" onclick="agregarAlCarrito('Orbiagro', 23500)">Añadir al carrito</button>
+              <button type="submit" id="botonSemillaOrbiagro" onclick="agregarAlCarrito('Orbiagro', 23500)">Añadir al
+                carrito</button>
             </div>
           </div>
         </div>
@@ -240,7 +238,8 @@
               <h5 class="card-title">Biotrapo</h5>
               <p class="card-text">Descripción del producto.</p>
               <p class="card-text" style="font-weight: bold;">Precio: $18000</p>
-              <button type="submit" id="botonSemillaBiotrapo" onclick="agregarAlCarrito('Biotrapo', 18000)">Añadir al carrito</button>
+              <button type="submit" id="botonSemillaBiotrapo" onclick="agregarAlCarrito('Biotrapo', 18000)">Añadir al
+                carrito</button>
             </div>
           </div>
         </div>
@@ -251,7 +250,8 @@
               <h5 class="card-title">Humus</h5>
               <p class="card-text">Descripción del producto.</p>
               <p class="card-text" style="font-weight: bold;">Precio: $25000</p>
-              <button type="submit" id="botonSemillaHumus" onclick="agregarAlCarrito('Humus', 25000)">Añadir al carrito</button>
+              <button type="submit" id="botonSemillaHumus" onclick="agregarAlCarrito('Humus', 25000)">Añadir al
+                carrito</button>
             </div>
           </div>
         </div>
@@ -262,12 +262,13 @@
               <h5 class="card-title">Micorrizas</h5>
               <p class="card-text">Descripción del producto.</p>
               <p class="card-text" style="font-weight: bold;">Precio: $25500</p>
-              <button type="submit" id="botonSemillaMicorrizas" onclick="agregarAlCarrito('Micorrizas', 25500)">Añadir al carrito</button>
+              <button type="submit" id="botonSemillaMicorrizas" onclick="agregarAlCarrito('Micorrizas', 25500)">Añadir
+                al carrito</button>
             </div>
           </div>
         </div>
       </div>
-      <h3 class="subtitle" id="herramientas">Kits de Herramientas</h3 >
+      <h3 class="subtitle" id="herramientas">Kits de Herramientas</h3>
       <div class="row">
         <div class="col-md-3">
           <div class="card">
@@ -278,7 +279,8 @@
                 piezas, herramienta de mano de aluminio resistente con delantal, bolsa de
                 almacenamiento.</p>
               <p class="card-text" style="font-weight: bold;">Precio: $150000</p>
-              <button type="submit" id="btnKitUno" onclick="agregarAlCarrito('Kit de Herramientas 1', 150000)">Añadir al carrito</button>
+              <button type="submit" id="btnKitUno" onclick="agregarAlCarrito('Kit de Herramientas 1', 150000)">Añadir al
+                carrito</button>
             </div>
           </div>
         </div>
@@ -289,7 +291,8 @@
               <h5 class="card-title">Juego de Herramientas</h5>
               <p class="card-text">Kit Herramientas Jardinería x11 Piezas Más Estuche Verde</p>
               <p class="card-text" style="font-weight: bold;">Precio: $120000</p>
-              <button type="submit" id="btnKitDos" onclick="agregarAlCarrito('Kit de Herramientas 2', 120000)">Añadir al carrito</button>
+              <button type="submit" id="btnKitDos" onclick="agregarAlCarrito('Kit de Herramientas 2', 120000)">Añadir al
+                carrito</button>
             </div>
           </div>
         </div>
@@ -300,7 +303,8 @@
               <h5 class="card-title">Kit de Herramientas</h5>
               <p class="card-text">Juego de herramientas de jardín, 10 piezas de acero inoxidable resistente</p>
               <p class="card-text" style="font-weight: bold;">Precio: $223000</p>
-              <button type="submit" id="btnKitTres" onclick="agregarAlCarrito('Kite de Herramientas 3', 223000)">Añadir al carrito</button>
+              <button type="submit" id="btnKitTres" onclick="agregarAlCarrito('Kite de Herramientas 3', 223000)">Añadir
+                al carrito</button>
             </div>
           </div>
         </div>
@@ -311,8 +315,9 @@
               <h5 class="card-title">Kit de Herramientas</h5>
               <p class="card-text">Kit para Jardinería 13 Piezas con Bolso de Transporte</p>
               <p class="card-text" style="font-weight: bold;">Precio: $142000</p>
-              <button type="submit" id="btnKitCuatro" onclick="agregarAlCarrito('Kite de Herramientas 4', 142000)">Añadir al carrito</button>
-              
+              <button type="submit" id="btnKitCuatro"
+                onclick="agregarAlCarrito('Kite de Herramientas 4', 142000)">Añadir al carrito</button>
+
             </div>
           </div>
         </div>
@@ -385,13 +390,7 @@
         </div>
       </div>
     </section>
-    <section class="subscribe-section" id="suscribe">
-      <h2>Suscríbete y recibe un 10% de descuento en tus compras</h2>
-      <form action="#" method="post" class="subscribe-form">
-        <input type="email" name="email" placeholder="Tu correo electrónico" required>
-        <button type="submit">Suscribirse</button>
-      </form>
-    </section>
+
     <!--Seccion de equipo (Integrantes)-->
     <section class="equipo">
       <h3 class="mbr-section-title mbr-fonts-style align-center display-7">Nuestro equipo</h3>
@@ -503,6 +502,8 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+
+  
 </body>
 
 </html>
