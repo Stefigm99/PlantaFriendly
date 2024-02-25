@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-8oPFk+m1IwNDhI4sU4D50H5nLg4h/7biOnF6xhBMVr/bD7ZtgjBeB+soq36j6HsSi7VCMzfljqFCXaWj7wopow=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="./assets/styles/main.css">
 
 
   <title>PlantaFriendly</title>
@@ -27,19 +30,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Cambio aquí: agregué la clase 'ms-auto' para mover el navbar a la derecha -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#catalogo" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Catálogo
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#semillas">Semillas</a></li>
-                <li><a class="dropdown-item" href="#fertilizantes">Fertilizantes</a></li>
-                <li><a class="dropdown-item" href="#herramientas">Herramientas</a></li>
-                <li><a class="dropdown-item" href="#herramientas">Sustratos </a></li>
-                <li><a class="dropdown-item" href="#herramientas">Aromáticas</a></li>
-              </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Cambio aquí: agregué la clase 'ms-auto' para mover el navbar a la derecha -->
+            <li class="nav-item">
+              <a class="nav-link" href="#catalogo">Catálogo</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#tutoriales">Tutoriales</a>
@@ -51,39 +45,19 @@
               <a class="nav-link" href="/pages/contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Lo más vendido</a>
+              <a class="nav-link" href="/pages/dasboardDatos.html">Estadísticas</a>
             </li>
           </ul>
-        </div>        
+        </div>
         <div id="iconoCarrito">
-          <img src="assets/icons/carrito-de-compras.png" id="carr" alt="Carrito de compras" class="carrito-icon">
-          <span id="cantidadCarrito" class="badge bg-success">0</span>
+          <a href="./carrito.html">
+            <img src="assets/icons/carrito-de-compras.png" id="carr" alt="Carrito de compras" class="carrito-icon">
+            <span id="numerito" class="numerito">0</span>
+        </a>
+          
         </div>
       </div>
     </nav>
-    <!-- Modal del carrito -->
-    <div class="modal" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-end">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Contenido del carrito -->
-            <p id="productosSinSeleccionar">Sin productos seleccionados</p>
-            <div id="carritoListado">
-              <ul id="listaProductos" class="list-group"></ul>
-              <p>Total: $<span id="totalCarrito">0.00</span></p>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-success">Realizar pedido</button>
-          </div>
-        </div>
-      </div>
-    </div>
     <!--Seccion de carrusel-->
     <section>
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -100,32 +74,32 @@
 
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="5000">
-              <img src="assets/img/carrusel.jpeg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                  <h1>Un mundo más verde</h1>
-                  <h5>¡Cuidar de nuestro planeta es construir un futuro mejor para todos!</h5>
-              </div>
+            <img src="assets/img/carrusel.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Un mundo más verde</h1>
+              <h5>¡Cuidar de nuestro planeta es construir un futuro mejor para todos!</h5>
+            </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-              <img src="assets/img/carrusel2.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                  <h1>Belleza natural</h1>
-                  <h5>Descubre la magia de la naturaleza y aprende a protegerla.</h5>
-              </div>
+            <img src="assets/img/carrusel2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Belleza natural</h1>
+              <h5>Descubre la magia de la naturaleza y aprende a protegerla.</h5>
+            </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-              <img src="assets/img/carrusel3.jpeg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                  <h1>Conciencia y armonía</h1>
-                  <h5>¡Cada pequeño gesto cuenta! Juntos podemos hacer la diferencia!</h5>
-              </div>
+            <img src="assets/img/carrusel3.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Conciencia y armonía</h1>
+              <h5>¡Cada pequeño gesto cuenta! Juntos podemos hacer la diferencia!</h5>
+            </div>
           </div>
           <div class="carousel-item" data-bs-interval="5000">
-              <img src="assets/img/carrusel4.jpeg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                  <h1>Un futuro brillante</h1>
-                  <h5>¡Imagina un mundo donde la naturaleza florezca y todos vivamos en armonía con ella!</h5>
-              </div>
+            <img src="assets/img/carrusel4.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Un futuro brillante</h1>
+              <h5>¡Imagina un mundo donde la naturaleza florezca y todos vivamos en armonía con ella!</h5>
+            </div>
           </div>
         </div>
 
@@ -167,276 +141,22 @@
         </div>
       </div>
     </section>
-    <section class="catalogo-container" id="catalogo">
-      <h2 class="text-center mb-5">Nuestros Productos</h2>
-      <h3 class="subtitle" id="semillas">Semillas</h3>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/semillasAbarco.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Abarco</h5>
-              <p class="card-text">100gr de semillas</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $2500</p>
-              <button type="submit" id="botonSemillaAbarco" onclick="agregarAlCarrito('Abarco', 2500)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/semillasJazmin.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Jazmin</h5>
-              <p class="card-text">150gr de semillas</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $4000</p>
-              <button type="submit" id="botonSemillaJazmin" onclick="agregarAlCarrito('Jazmin', 4000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/semillasAchiote.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Achiote</h5>
-              <p class="card-text">150gr de semillas</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $5000</p>
-              <button type="submit" id="botonSemillaAchiote" onclick="agregarAlCarrito('Achiote', 5000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/semillasHauyelo.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Hauyelo</h5>
-              <p class="card-text">170gr de semillas</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $6000</p>
-              <button type="submit" id="botonSemillaHauyelo" onclick="agregarAlCarrito('Hauyelo', 6000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
+    <!-- Catalogo -->
+    <div class="content-catalogo" id="catalogo">   
+      <section class="catalogo">
+          <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+          <div id="contenedor-productos" class="contenedor-productos">
+          </section>
+        </section>
       </div>
-      <h3 class="subtitle" id="fertilizantes">Fertilizantes</h3>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/ferilizanteOrbiagro.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Orbiagro</h5>
-              <p class="card-text">Descripción del producto.</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $23500</p>
-              <button type="submit" id="botonSemillaOrbiagro" onclick="agregarAlCarrito('Orbiagro', 23500)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/fertilizanteBiotapro.jpeg" class="card-img-top" alt="">
-              <h5 class="card-title">Biotrapo</h5>
-              <p class="card-text">Descripción del producto.</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $18000</p>
-              <button type="submit" id="botonSemillaBiotrapo" onclick="agregarAlCarrito('Biotrapo', 18000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/fertilizanteHumus.jpeg" class="card-img-top" alt="" style="width: 85%;">
-              <h5 class="card-title">Humus</h5>
-              <p class="card-text">Descripción del producto.</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $25000</p>
-              <button type="submit" id="botonSemillaHumus" onclick="agregarAlCarrito('Humus', 25000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/fertilizantesMicorrizas.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Micorrizas</h5>
-              <p class="card-text">Descripción del producto.</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $25500</p>
-              <button type="submit" id="botonSemillaMicorrizas" onclick="agregarAlCarrito('Micorrizas', 25500)">Añadir
-                al carrito</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h3 class="subtitle" id="herramientas">Kits de Herramientas</h3>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/kitdeHerramienta2.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Juego de herramientas</h5>
-              <p class="card-text">11
-                piezas, herramienta de mano de aluminio resistente con delantal, bolsa de
-                almacenamiento.</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $150000</p>
-              <button type="submit" id="btnKitUno" onclick="agregarAlCarrito('Kit de Herramientas 1', 150000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/kitdeHerramienta1.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Juego de Herramientas</h5>
-              <p class="card-text">Kit Herramientas Jardinería x11 Piezas Más Estuche Verde</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $120000</p>
-              <button type="submit" id="btnKitDos" onclick="agregarAlCarrito('Kit de Herramientas 2', 120000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/kitHerramienta4.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Kit de Herramientas</h5>
-              <p class="card-text">Juego de herramientas de jardín, 10 piezas de acero inoxidable resistente</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $223000</p>
-              <button type="submit" id="btnKitTres" onclick="agregarAlCarrito('Kite de Herramientas 3', 223000)">Añadir
-                al carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/kitdeHerramienta3.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Kit de Herramientas</h5>
-              <p class="card-text">Kit para Jardinería 13 Piezas con Bolso de Transporte</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $142000</p>
-              <button type="submit" id="btnKitCuatro" onclick="agregarAlCarrito('Kit de Herramientas 4', 142000)">Añadir
-                al carrito</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h3 class="subtitle" id="fertilizantes">Sustratos</h3>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/cortezaPino.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Corteza de Pino</h5>
-              <p class="card-text">Descripción del producto.</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $45000</p>
-              <button type="submit" id="botonSemillaOrbiagro"
-                onclick="agregarAlCarrito('Corteza de Pino', 45000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/aserrin.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Aserrín</h5>
-              <p class="card-text">Descripción deL producto</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $35000</p>
-              <button type="submit" id="btnKitCuatro" onclick="agregarAlCarrito('Aserrín de 3 kilos', 35000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/arena.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Arena</h5>
-              <p class="card-text">Descripción deL producto</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $80000</p>
-              <button type="submit" id="btnKitCuatro" onclick="agregarAlCarrito('Arena de 15 kilos', 80000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/grava.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Grava</h5>
-              <p class="card-text">Descripción deL producto</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $75000</p>
-              <button type="submit" id="btnKitCuatro" onclick="agregarAlCarrito('Gracade 15 kilos', 75000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h3 class="subtitle" id="aromaticas">Aromáticas</h3>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/oregano.png" class="card-img-top" alt="">
-              <h5 class="card-title">Aromáticas de Orégano</h5>
-              <p class="card-text">Descripción del producto.</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $16500</p>
-              <button type="submit" id="botonSemillaOrbiagro"
-                onclick="agregarAlCarrito('Aromáticas de Orégano', 16500)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/albahaca.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Aromáticas de Albahaca</h5>
-              <p class="card-text">Descripción deL producto</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $18000</p>
-              <button type="submit" id="btnKitCuatro" onclick="agregarAlCarrito('Aromaticas de Albahaca', 18000)">Añadir
-                al carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/ruda.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Aromáticas de Ruda</h5>
-              <p class="card-text">Descripción deL producto</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $15000</p>
-              <button type="submit" id="btnKitCuatro" onclick="agregarAlCarrito('Aromaticas de Ruda', 15000)">Añadir al
-                carrito</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="assets/img/cedron.jpg" class="card-img-top" alt="">
-              <h5 class="card-title">Aromáticas de Cedrón</h5>
-              <p class="card-text">Descripción deL producto</p>
-              <p class="card-text" style="font-weight: bold;">Precio: $16000</p>
-              <button type="submit" id="btnKitCuatro" onclick="agregarAlCarrito('aromaticas de Cedrón', 16000)">Añadir
-                al carrito</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!--Seccion de eventos-->
     <section class="eventos" id="tutoriales">
       <div class="container-fluid">
         <div class="row justify-content-center mb-3">
           <div class="col-12 content-head">
             <div class="mbr-section-head">
-              <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-5">
-                <strong>Tutoriales</strong>
+              <h4 class="title-tutorial">
+                Tutoriales
               </h4>
             </div>
           </div>
@@ -524,7 +244,7 @@
         </li>
         <li>
           <div class="miembro-info">
-            <a href="https://github.com/" target="_blank"><img src="assets/icons/github.png" alt="GitHub"></a>
+            <a href="https://github.com/sander0919" target="_blank"><img src="assets/icons/github.png" alt="GitHub"></a>
             <h4 class="mbr-section-title mbr-fonts-style align-center display-7">Alexander Loaiza</h4>
           </div>
         </li>
@@ -541,6 +261,7 @@
         <img src="assets/icons/whatsapp.png" alt="Icono de WhatsApp">
       </a>
     </div>
+  </main>
     <footer>
       <div class="container">
         <div class="logo">
@@ -550,20 +271,26 @@
         </div>
         <div class="contact-info">
           <h4>Contacto</h4>
-          <p><img src="assets/icons/direccion.png" style="height: 1.2rem; margin-right: 2px;"  alt="Icono de dirección"> Dirección: Medellín, Colombia</p>
-          <p><img src="assets/icons/telefono.png" style="height: 1.1rem; margin-right: 4px;"alt="Icono de teléfono">Teléfono: <a href="tel:123-456-789" class="text-white">123-456-789</a></p>
-          <p><img src="assets/icons/correo-electronico.png" style="height: 1rem; margin-right: 4px;" alt="Icono de correo electrónico">Correo electrónico: <a href="mailto:info@plantafriendly.com" class="text-white">info@plantafriendly.com</a>
+          <p><img src="assets/icons/direccion.png" style="height: 1.2rem; margin-right: 2px;" alt="Icono de dirección">
+            Dirección: Medellín, Colombia</p>
+          <p><img src="assets/icons/telefono.png" style="height: 1.1rem; margin-right: 4px;"
+              alt="Icono de teléfono">Teléfono: <a href="tel:123-456-789" class="text-white">123-456-789</a></p>
+          <p><img src="assets/icons/correo-electronico.png" style="height: 1rem; margin-right: 4px;"
+              alt="Icono de correo electrónico">Correo electrónico: <a href="mailto:info@plantafriendly.com"
+              class="text-white">info@plantafriendly.com</a>
           </p>
-          <p><img src="assets/icons/calendario.png" style="height: 1rem; margin-right: 4px;"alt="Icono de horario">Horario de atención: Lunes a Viernes de 9am a 6pm</p>
+          <p><img src="assets/icons/calendario.png" style="height: 1rem; margin-right: 4px;"
+              alt="Icono de horario">Horario de atención: Lunes a Viernes de 9am a 6pm</p>
         </div>
         <div class="quick-links">
           <h4>Enlaces rápidos</h4>
           <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#catalogo">Productos</a></li>
+            <li><a href="#tutoriales">Tutoriales</a></li>
+            <li><a href="/pages/contacto.html">Contacto</a></li>
+            <li><a href="/pages/dasboardDatos.html">Estadísticas</a></li>
+
           </ul>
         </div>
         <div class="redes-lista">
@@ -571,8 +298,10 @@
           <ul>
             <li><a href="https://facebook.com" target="_blank"><img src="assets/icons/facebook.png" alt="Facebook"></a>
             </li>
-            <li><a href="https://twitter.com" target="_blank"><img src="assets/icons/twitter.png" alt="Twitter"></a></li>
-            <li><a href="https://instagram.com" target="_blank"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+            <li><a href="https://twitter.com" target="_blank"><img src="assets/icons/twitter.png" alt="Twitter"></a>
+            </li>
+            <li><a href="https://instagram.com" target="_blank"><img src="assets/icons/instagram.png"
+                  alt="Instagram"></a>
             </li>
           </ul>
         </div>
@@ -581,13 +310,15 @@
         <p>© 2024 PlantaFriendly. Todos los derechos reservados.</p>
       </div>
     </footer>
-  </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="./js/catalogo.js"></script>
+<script src="./js/menu.js"></script>
 
-  
+
 </body>
 
 </html>

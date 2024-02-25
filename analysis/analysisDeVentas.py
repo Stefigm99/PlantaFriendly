@@ -1,5 +1,4 @@
 import pandas as pd
-from helpers.creacionTabla import crearTabla
 from helpers.creacionGrafica import generarGrafica
 
 
@@ -10,20 +9,20 @@ def analizarRegistroVentas():
     #3. Aplico filtros para limpiar o seleccionar datos
     #Filtro de Semillas con ventas superiores a 4000
     filtroVentasSemillas=tabla.query(" (Categoria == 'Semillas') and (Ventas > 400 ) ") 
-    crearTabla(filtroVentasSemillas,"filtroVentasSemillas")
+    (filtroVentasSemillas,"filtroVentasSemillas")
     
     #Filtro de Fertilizantes
     filtroVentasFertilizantes=tabla.query(" (Categoria == 'Fertilizantes') and (Ventas > 600 ) ") 
-    crearTabla(filtroVentasFertilizantes,"filtroVentasFertilizantes")
+    (filtroVentasFertilizantes,"filtroVentasFertilizantes")
 
     filtroVentasSustratos=tabla.query(" (Categoria == 'Sustratos') and (Ventas > 600 ) ") 
-    crearTabla(filtroVentasSustratos,"filtroVentasSustratos")
+    (filtroVentasSustratos,"filtroVentasSustratos")
 
     filtroVentasherramientas=tabla.query(" (Categoria == 'Herramientas') and (Ventas > 500 ) ") 
-    crearTabla(filtroVentasherramientas,"filtroVentasherramientas")
+    (filtroVentasherramientas,"filtroVentasherramientas")
 
     filtroVentasAromaticas=tabla.query(" (Categoria == 'Aromaticas') and (Ventas > 500 ) ") 
-    crearTabla(filtroVentasAromaticas,"filtroVentasAromaticas")
+    (filtroVentasAromaticas,"filtroVentasAromaticas")
 
 
     

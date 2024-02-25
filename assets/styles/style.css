@@ -46,42 +46,6 @@
   display: flex;
   align-items: center;
 }
-/* Estilos para el contenido del modal */
-.modal-content {
-  background-color: white !important; /*Se usa important para forzar el cambio de estilo en el bootstrap*/
-  border-radius: 10px !important;
-}
-
-/* Estilos para el encabezado del modal */
-.modal-header {
-  background-color: #f0f0f0 !important;
-  border-bottom: none !important;
-}
-
-/* Estilos para el cuerpo del modal */
-.modal-body {
-  padding: 20px !important;
-}
-
-/* Estilos para el pie del modal */
-.modal-footer {
-  background-color: #f0f0f0 !important;
-  border-top: none !important;
-}
-
-/* Estilos para el botón cerrar del modal */
-.modal-dialog {
-  margin-left: auto !important;
-  margin-right: 0px !important;
-  width: 30vw !important; 
-  height: 200vh !important;
-}
-.modal {
-  align-items: center !important;
-  justify-content: flex-end !important; 
-  height: 100vh !important;
-  
-} 
 .search-icon {
   position: absolute;
   top: 50%;
@@ -117,7 +81,7 @@
   border-color: #99e39c !important;
 }
   
-/* estilos generales */
+/* estilos generales para la seccion Nosotros */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -155,19 +119,26 @@
 }
 /* Estilos para Seccion de Tutoriales*/
 .eventos {
-  padding-top: 0;
+  padding: 10px;
   padding-bottom: 2rem;
   background-color: #f7f6f6;
   
   }
-  .eventos img,
-  .eventos .item-img {
+.title-tutorial{
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+}  
+
+.eventos img,
+.eventos .item-img {
   width: 100%;
   height: 100%;
   height: 200px;
   object-fit: cover;
-  } 
-  .item-content h6 {
+  margin-top: 10px;
+} 
+.item-content h6 {
   font-size: 1.2em; 
   font-weight: bold; 
   margin-bottom: 10px; 
@@ -197,7 +168,7 @@
 }
 .item {
   border-radius: 5px;
-  box-shadow: 2px 2px 12px black;
+  box-shadow: 0 2px 5px black;
   text-align: center;
   transition: all 0.25s;
   margin-left: 75px;
@@ -205,79 +176,9 @@
 
 .item:hover{
   transform: translateY(-15px);
-  box-shadow: 0 15px 18px black;
+  box-shadow: 0 10px 15px black;
 }
 
-.item-footer .btn:hover {
-  background-color: #45a049; 
-}
-
-/* Estilos para la sección de formulario */
-.formulario {
-  padding: 50px 0; 
-  margin-top: 50px;
-   
-}
-
-.containerForm {
-  
-  margin: 0 auto; 
-  height: auto
-}
-
-.content-head {
-  text-align: center; 
-  margin-bottom: 30px; 
-}
-
-.mbr-section-title {
-  font-size: 36px; 
-  margin-top: 30px;
-  margin-bottom: 50px;
-  text-align: center;
-}
-.formcampos{
-  background-color: #e5ddc3;
-  padding: 20px 0 10px;
-  border-radius: 20px;
-  border-style:ridge;
-}
-
-.mbr-form input[type="text"],
-.mbr-form input[type="email"],
-.mbr-form input[type="url"],
-.mbr-form textarea {
-  width: 100%; 
-  padding: 10px; 
-  margin-bottom: 15px;
-  border: 1px solid #ccc; 
-  border-radius: 8px; 
-  box-sizing: border-box; 
-  font-size: 16px; 
-}
-
-.mbr-form textarea {
-  height: 100px; 
-}
-
-.mbr-section-btn {
-  text-align: center; 
-}
-
-.btn-success {
-  background-color: #4CAF50; 
-  color: white; 
-  padding: 15px 25px;
-  border: none; 
-  border-radius: 8px; 
-  cursor: pointer; 
-  font-size: 16px; 
-  transition: background-color 0.3s ease; 
-}
-
-.btn-success:hover {
-  background-color: #45a049; 
-}
 /* Estilos de la seccion Equipo*/
 .equipo {
   text-align: center;
@@ -287,6 +188,7 @@
 
 .equipo h3 {
   font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .equipo-lista {
@@ -313,113 +215,20 @@
 .miembro-info h4 {
   margin: 5px 0;
   font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .miembro-info img {
   width: 30px;
   height: 30px;
 }
-/* Estilos de la seccion Catalogo*/
-.catalogo-container {
-  padding: 20px;
-}
-
-.subtitle {
-  margin-left: 20px; 
-}
-
-.card {
-  margin-bottom: 20px;
-  border: 1px solid #ddd; 
-  border-radius: 5px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.card-body {
-  text-align: left;
-}
-
-.card-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-top: 5px;
-}
-
-.card-text {
-  font-size: 16px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.card-img-top {
-  max-width: 100%;
-  height: 300px;
-}
-.card-body button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.card-body button:hover {
-  background-color: #45a049;
-}
-
-.list-group {
-  list-style: none; 
-  padding-left: 0; 
-}
-
-.list-group-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.list-group-item img {
-  max-width: 50px;
-}
-
-.eliminar-icon {
-  color: red;
-  cursor: pointer;
-}
-/* Estilos de la seccion de Graficas*/
-#graficas {
-  text-align: center; /* Centra el contenido de la sección */
-}
-
-#graficas .my-5.text-center {
-  margin-bottom: 50px; /* Ajusta el margen inferior del título */
-}
-
-#graficas .col-6.border.shadow {
-  margin-left: auto; 
-  margin-right: auto;
-  background-color: #b6e2bd;
-  border-radius: 30px;
-}
-#graficas .mbr-section-title {
-  margin-top: 40px; 
-  background-color: #0808084f;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #fffdfd;
-  
-}
-#graficas .nav-link {
-  color: #0f4805; /
-}
-
 /*Footer*/
 footer {
   background-color: #174c21;
   color: #fff;
   padding-top: 10px;
   border-radius: 20px;
+  
 }
 
 .container {
