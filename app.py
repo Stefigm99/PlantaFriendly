@@ -1,51 +1,49 @@
-import pandas as pd
-import dash
-from dash import dcc, html, Input, Output
-import plotly.express as px
+from flask import Flask, render_template, request, jsonify
+import pyodbc
 
-# Leer los datos
-df = pd.read_csv('data/bdplantas.csv')
+app = Flask(__name__)
 
-# Calcular las ventas totales por producto
-ventas_por_producto = df.groupby(['Nombre', 'Categoria'])['Ventas'].sum().reset_index()
+# Configuración de la conexión a la base de datos
+server = 'LAPTOP-86592LS1\\SQLEXPRESS'
+database = 'plantafriendly'  
+connection_string = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};Trusted_Connection=yes;'
 
-# Iniciar la aplicación Dash
-app = dash.Dash(__name__)
+@app.route('/')
+def formulario_registro():
+    return render_template('loginRegister.html')
 
-# Definir una paleta de colores personalizada
-colores_personalizados = {
-    "Semillas": "#1f77b4",
-    "Fertilizantes": "#ff7f0e",
-    "Herramientas": "#2ca02c",
-    "Sustratos": "#d62728",
-    "Aromaticas": "#9467bd"
-}
+@app.route('/registro', methods=['POST'])
+def procesar_registro():
+    nombre = request.form['nombre']
+    apellido = request.form['apellido']
+    correo = request.form['correo']
+    contrasena = request.form['contrasena']
 
-# Definir el layout del dashboard
-app.layout = html.Div([
-    html.H1('Dashboard interactivo de productos', style={'font-family': 'Times New Roman', 'margin-bottom': '20px', 'font-size': '32px', 'margin-left':'10px'}),
-    html.Div([
-        html.Label('Selecciona una categoría:',style={'font-family': 'Times New Roman', 'margin-bottom': '10px', 'font-size': '25px', 'margin-left':'10px'}),
-        dcc.Dropdown(
-            id='categoria-dropdown',
-            options=[{'label': cat, 'value': cat} for cat in df['Categoria'].unique()],
-            value=df['Categoria'].unique()[0]
-        )
-    ]),
-    dcc.Graph(id='productos')
-])
+    try:
+        # Conectar a la base de datos
+        connection = pyodbc.connect(connection_string)
 
-# Definir la lógica de actualización del gráfico
-@app.callback(
-    Output('productos', 'figure'),
-    [Input('categoria-dropdown', 'value')]
-)
-def update_graph(selected_category):
-    filtered_df = ventas_por_producto[ventas_por_producto['Categoria'] == selected_category]
-    fig = px.bar(filtered_df, x='Nombre', y='Ventas', color='Categoria',
-                 title=f'Ventas de Productos: {selected_category}', color_discrete_map=colores_personalizados)
-    return fig
+        # Crear un cursor para ejecutar consultas
+        cursor = connection.cursor()
 
-# Ejecutar la aplicación Dash
+        # Insertar datos en la tabla 'usuarios'
+        cursor.execute(f"INSERT INTO usuario (nombre_usuario, apellido_usuario, correo, contraseña) VALUES (?, ?, ?, ?)",
+                       (nombre, apellido, correo, contrasena))
+
+        # Confirmar los cambios en la base de datos
+        connection.commit()
+
+        # Registro exitoso, devolver un mensaje de éxito al frontend
+        return jsonify({"success": True})
+
+    except Exception as e:
+        # Si ocurre un error, devolver un mensaje de error al frontend
+        return jsonify({"success": False, "error": str(e)})
+
+    finally:
+        # Cerrar la conexión
+        if 'connection' in locals():
+            connection.close()
+
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True)

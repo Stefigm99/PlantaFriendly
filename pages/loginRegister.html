@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">        
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/assets/styles/login.css">
+    <link rel="icon" href="/assets/icons/planta.png" type="image/x-icon">
+    <title>Formulario de Registro e Inicio de Sesión</title>
+</head>
+<body class="login-registro">
+    <div class="container-form login">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡Bienvenido nuevamente!</h2>
+                <p>Si aún no tiene una cuenta por favor regístrese aquí.</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesión</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-apple'></i>
+                </div>
+                <p>Iniciar sesión con una cuenta.</p>
+                <form class="form" id="iniciarSesionForm">
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" placeholder="Correo Electrónico" id="correoInicio">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Contraseña" id="contrasenaInicio">
+                    </label>
+                   <input type="button" id="btnInicioSesion" value="Iniciar Sesión" >
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-form register hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <p>Para unirte a nuestro vivero por favor inicia sesión con tus datos.</p>
+                <input type="button" value="Iniciar Sesión" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear una Cuenta</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-apple'></i>
+                </div>
+                <p>o usa tu correo electrónico para registrarte.</p>
+                <form class="form" action="" method="" id="registrationForm">
+                    <label>
+                        <i class='bx bx-user'></i>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    </label>
+                    <label>
+                        <i class='bx bx-user'></i>
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                    </label>
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" name="correo" id="correo" placeholder="Correo Electrónico">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+                    </label>
+                    <input type="button" value="Registrarse" id="btnRegistro" onclick="registro()" >
+                </form>
+            </div>
+        </div>
+    </div>
+   <script src="/js/login.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+</html>

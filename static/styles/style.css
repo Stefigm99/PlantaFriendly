@@ -118,26 +118,16 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 /* Estilos para Seccion de Tutoriales*/
-.content-tutoriales{
-  background-color: #b3c5a9;
-  padding: 30px;
-}
 .eventos {
   padding: 10px;
   padding-bottom: 2rem;
-  background-color: #fdfdfd;
-  border-radius: 20px;
-  margin-right: 15px;
-  margin-left: 15px;
+  background-color: #f7f6f6;
   
   }
 .title-tutorial{
-  text-align: left;
-  font-family: 'Rubik', sans-serif;
-  font-size: 35px;
-  margin-left: 50px;
-  padding: 20px;
-
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
 }  
 
 .eventos img,
@@ -166,7 +156,15 @@
   padding-right: 10px; 
   padding-bottom: 15px; 
   padding-left: 15px; 
-  font-family: 'Rubik', sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.item-footer .btn {
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 0.9em; 
+  border-radius: 5px; 
 }
 .item {
   border-radius: 5px;
@@ -190,8 +188,7 @@
 
 .equipo h3 {
   font-size: 40px;
-  font-family: 'Rubik', sans-serif;
-  padding: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .equipo-lista {
@@ -218,8 +215,7 @@
 .miembro-info h4 {
   margin: 5px 0;
   font-size: 25px;
-  font-family: 'Rubik', sans-serif;
-  padding-bottom: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .miembro-info img {
@@ -240,7 +236,7 @@ footer {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  font-family: 'Rubik', sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .logo img {
