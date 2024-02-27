@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="icon" href="/assets/icons/planta.png" type="image/x-icon">
-
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <title>Graficas PlantaFrienly</title>
 </head>
 
@@ -33,13 +33,13 @@
               <a class="nav-link" href="/index.html#tutoriales">Tutoriales</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/catalogo.html">Catálogo</a>
+              <a class="nav-link" href="#">Catálogo</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/pages/contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Estadísticas</a>
+              <a class="nav-link" href="/pages/dasboardDatos.html">Estadísticas</a>
             </li>
           </ul>
         </div>
@@ -79,75 +79,70 @@
         mostrarBotonCerrarSesion();
       });
     </script>
-    <section>
-      <div id="graficas">
-        <div class="row my-5 text-center">
-          <h1 class="mbr-section-title mb-4 display-6">
-            <strong>Registros de Productos mas Vendidos</strong>
-          </h1>
-
-          <div id="plot">
-            <iframe src="http://127.0.0.1:8050/" style="width: 800px;
-      height: 600px"></iframe>
+    <div class="content-catalogo" id="catalogo">   
+      <section class="catalogo">
+          <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+          <div id="contenedor-productos" class="contenedor-productos">
+          </section>
+        </section>
+      </div>
+    <footer>
+        <div class="container">
+          <div class="logo">
+            <img src="/assets/icons/planta.png" alt="Logo de la Tienda de Jardinería">
+            <a class="navbar-brand" href="index.html"
+              style="color: rgb(255, 255, 255); font-size: 26px;">PlantaFriendly</a>
+          </div>
+          <div class="contact-info">
+            <h4>Contacto</h4>
+            <p><img src="/assets/icons/direccion.png" style="height: 1.2rem; margin-right: 2px;" alt="Icono de dirección">
+              Dirección: Medellín, Colombia</p>
+            <p><img src="/assets/icons/telefono.png" style="height: 1.1rem; margin-right: 4px;"
+                alt="Icono de teléfono">Teléfono: <a href="tel:123-456-789" class="text-white">123-456-789</a></p>
+            <p><img src="/assets/icons/correo-electronico.png" style="height: 1rem; margin-right: 4px;"
+                alt="Icono de correo electrónico">Correo electrónico: <a href="mailto:info@plantafriendly.com"
+                class="text-white">info@plantafriendly.com</a>
+            </p>
+            <p><img src="/assets/icons/calendario.png" style="height: 1rem; margin-right: 4px;"
+                alt="Icono de horario">Horario de atención: Lunes a Viernes de 9am a 6pm</p>
+          </div>
+          <div class="quick-links">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+              <li><a href="/index.html">Inicio</a></li>
+              <li><a href="/index.html#catalogo">Productos</a></li>
+              <li><a href="/index.html#tutoriales">Tutoriales</a></li>
+              <li><a href="/pages/contacto.html">Contacto</a></li>
+              <li><a href="/pages/dasboardDatos.html">Estadísticas</a></li>
+            </ul>
+          </div>
+          <div class="redes-lista">
+            <h4>Síguenos en redes sociales</h4>
+            <ul>
+              <li><a href="https://facebook.com" target="_blank"><img src="/assets/icons/facebook.png" alt="Facebook"></a>
+              </li>
+              <li><a href="https://twitter.com" target="_blank"><img src="/assets/icons/twitter.png" alt="Twitter"></a>
+              </li>
+              <li><a href="https://instagram.com" target="_blank"><img src="/assets/icons/instagram.png"
+                    alt="Instagram"></a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-    <!--Seccion de contacto-->
-    <footer>
-      <div class="container">
-        <div class="logo">
-          <img src="/assets/icons/planta.png" alt="Logo de la Tienda de Jardinería">
-          <a class="navbar-brand" href="index.html"
-            style="color: rgb(255, 255, 255); font-size: 26px;">PlantaFriendly</a>
+        <div class="copyright">
+          <p>© 2024 PlantaFriendly. Todos los derechos reservados.</p>
         </div>
-        <div class="contact-info">
-          <h4>Contacto</h4>
-          <p><img src="/assets/icons/direccion.png" style="height: 1.2rem; margin-right: 2px;" alt="Icono de dirección">
-            Dirección: Medellín, Colombia</p>
-          <p><img src="/assets/icons/telefono.png" style="height: 1.1rem; margin-right: 4px;"
-              alt="Icono de teléfono">Teléfono: <a href="tel:123-456-789" class="text-white">123-456-789</a></p>
-          <p><img src="/assets/icons/correo-electronico.png" style="height: 1rem; margin-right: 4px;"
-              alt="Icono de correo electrónico">Correo electrónico: <a href="mailto:info@plantafriendly.com"
-              class="text-white">info@plantafriendly.com</a>
-          </p>
-          <p><img src="/assets/icons/calendario.png" style="height: 1rem; margin-right: 4px;"
-              alt="Icono de horario">Horario de atención: Lunes a Viernes de 9am a 6pm</p>
-        </div>
-        <div class="quick-links">
-          <h4>Enlaces rápidos</h4>
-          <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/index.html#catalogo">Productos</a></li>
-            <li><a href="/index.html#tutoriales">Tutoriales</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="#">Estadísticas</a></li>
-          </ul>
-        </div>
-        <div class="redes-lista">
-          <h4>Síguenos en redes sociales</h4>
-          <ul>
-            <li><a href="https://facebook.com" target="_blank"><img src="/assets/icons/facebook.png" alt="Facebook"></a>
-            </li>
-            <li><a href="https://twitter.com" target="_blank"><img src="/assets/icons/twitter.png" alt="Twitter"></a>
-            </li>
-            <li><a href="https://instagram.com" target="_blank"><img src="/assets/icons/instagram.png"
-                  alt="Instagram"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>© 2024 PlantaFriendly. Todos los derechos reservados.</p>
-      </div>
-    </footer>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <script src="/js/catalogo.js"></script>
-  <script src="/js/menu.js"></script>
-  <script src="/js/login.js"></script>
-</body>
-
-</html>
+      </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+  <script src="/js/main.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="/js/catalogo.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/carrito.js"></script>
+  </body>
+  
+  </html>
