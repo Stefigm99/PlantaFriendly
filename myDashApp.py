@@ -23,9 +23,8 @@ colores_personalizados = {
 
 # Definir el layout del dashboard
 app.layout = html.Div([
-    html.H1('Dashboard interactivo de productos', style={'font-family': 'Times New Roman', 'margin-bottom': '20px', 'font-size': '32px', 'margin-left':'10px'}),
     html.Div([
-        html.Label('Selecciona una categoría:',style={'font-family': 'Times New Roman', 'margin-bottom': '10px', 'font-size': '25px', 'margin-left':'10px'}),
+        html.Label('Selecciona una categoría:',style={'font-family': 'Times New Roman', 'margin-bottom': '10px', 'font-size': '20px', 'margin-left':'10px'}),
         dcc.Dropdown(
             id='categoria-dropdown',
             options=[{'label': cat, 'value': cat} for cat in df['Categoria'].unique()],

@@ -39,6 +39,7 @@ a{
   background-color: #f5f0e0; 
   padding: 10px 20px; 
   font-family:Georgia, 'Times New Roman', Times, serif;
+  box-shadow:0 0 5px 0 #000;
 }
 .navbar-brand {
   font-family: 'Rubik', sans-serif;
@@ -230,7 +231,7 @@ a{
 }
 
 .equipo h3 {
-  font-size: 40px;
+  font-size: 35px;
   font-family: 'Rubik', sans-serif;
   padding: 30px;
 }
@@ -257,8 +258,8 @@ a{
 }
 
 .miembro-info h4 {
-  margin: 5px 0;
-  font-size: 25px;
+  margin: 3px 0;
+  font-size: 24px;
   font-family: 'Rubik', sans-serif;
   padding-bottom: 20px;
 }
@@ -297,6 +298,7 @@ footer {
   margin-top: 0;
   margin-bottom: 20px;
   text-align: center;
+  font-size: 20px;
 }
 
 .contact-info ul, .quick-links ul, .redes-lista ul {
@@ -308,10 +310,21 @@ footer {
   margin-bottom: 5px;
   
 }
+.contact-info a{
+  text-decoration: none;
+  color: white;
+}
+.contact-info a:hover{
+  text-decoration:underline;
+  
+}
 
 .quick-links ul li a{
   text-decoration: none;
   color: white;
+}
+.quick-links a:hover{
+  text-decoration: underline;
 }
 .redes-lista  ul {
   display: flex;

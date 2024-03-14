@@ -1,8 +1,16 @@
 /* Estilos para la sección de formulario */
 .formulario {
-  padding: 50px 0; 
-  margin-top: 50px;
+  
+  padding: 25px
    
+}
+.contact-title{
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgba(255, 255, 255, 0.59);
+  margin-bottom: 50px;
+  margin-top: 70px;
+  
 }
 
 .containerForm {
@@ -16,17 +24,15 @@
   margin-bottom: 30px; 
 }
 
-.mbr-section-title {
-  font-size: 36px; 
-  margin-top: 30px;
-  margin-bottom: 50px;
-  text-align: center;
-}
 .formcampos{
-  background-color: #e5ddc3;
-  padding: 20px 0 10px;
+  background-color: #91c370;
+  padding: 20px 0 15px;
   border-radius: 20px;
-  border-style:ridge;
+  margin-bottom: 50px;
+  box-shadow: 1px 2px 5px black;
+}
+.form-check{
+  margin-left: 20px;
 }
 
 .mbr-form input[type="text"],
@@ -37,9 +43,9 @@
   padding: 10px; 
   margin-bottom: 15px;
   border: 1px solid #ccc; 
-  border-radius: 8px; 
+  border-radius: 40px; 
   box-sizing: border-box; 
-  font-size: 16px; 
+  font-size: 14px; 
 }
 
 .mbr-form textarea {
@@ -55,7 +61,7 @@
   color: white; 
   padding: 15px 25px;
   border: none; 
-  border-radius: 8px; 
+  border-radius: 40px !important; 
   cursor: pointer; 
   font-size: 16px; 
   transition: background-color 0.3s ease; 
@@ -63,4 +69,21 @@
 
 .btn-success:hover {
   background-color: #45a049; 
+}
+.imagen-form {
+  text-align: center; /* Centra la imagen horizontalmente */
+  margin-top: 100px;
+}
+
+.imagen-form img {
+  max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+  height: auto; 
+  border-radius: 20px;
+}
+
+/* Ajustes de diseño para pantallas pequeñas */
+@media (max-width: 768px) {
+  .imagen-form {
+    margin-bottom: 20px; /* Agrega espacio entre la imagen y el formulario en dispositivos móviles */
+  }
 }

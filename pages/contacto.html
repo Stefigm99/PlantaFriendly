@@ -22,7 +22,7 @@
   <title>Contacto PlantaFrienly</title>
 </head>
 
-<body background="/assets/img/fondo.jpg" style="background-size: cover; background-repeat: no-repeat;">
+<body>
   <main>
     <nav class="navbar navbar-expand-lg" id="custom-navbar">
       <div class="container-fluid">
@@ -86,15 +86,39 @@
           });
         </script>
     </nav>
+    <script>
+      // Función para validar el checkbox antes de enviar el formulario
+      function validarFormulario() {
+        var checkbox = document.getElementById('terminos-condiciones');
+    
+        // Verificar si el checkbox está marcado
+        if (!checkbox.checked) {
+          alert('Por favor, acepta los términos y condiciones antes de enviar el formulario.');
+          return false; // Detener el envío del formulario
+        }
+    
+        return true; // Permitir el envío del formulario si el checkbox está marcado
+      }
+    </script>
     <!--Seccion formulario-->
     <section class="formulario" id="contact">
-      <div class="containerForm justify-content-center">
-        <h3 class="mbr-section-title mbr-fonts-style align-center display-5"
-          style="background-color: rgba(255, 255, 255, 0.534); font-family: Georgia, 'Times New Roman', Times, serif;">
-          <strong>¡Dejanos tu mensaje!</strong>
-        </h3>
+      <div class="containerForm">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="imagen-form">
+              <p style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                Si tienes alguna duda, comentario o sugerencia puedes contactarnos y nos comunicamos contigo lo antes posible.
+              </p>
+              <img src="/assets/img/carrusel3.jpeg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+        <h2 class="contact-title">
+          ¡Dejanos tu mensaje!
+        </h2>
         <div class="row justify-content-center">
-          <div class=" formcampos col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+      
+          <div class=" formcampos col-lg-11 mx-auto mbr-form" data-form-type="formoid">
 
             <form action="" id="form" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden"
                 name="email" data-form-email="true" value="">
@@ -116,6 +140,12 @@
                   <textarea name="comentario" placeholder="Mensaje" data-form-field="comentario" class="form-control"
                     id="comentario" required></textarea>
                 </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="terminos-condiciones">
+                  <label class="form-check-label" for="terminos-condiciones">
+                    Acepto la Política de datos
+                  </label>
+                </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit"
                     id="button" class="btn btn-success" value="Enviar">Enviar</button></div>
               </div>
@@ -131,6 +161,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
     <!--Seccion de footer-->
     <footer>

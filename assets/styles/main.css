@@ -152,6 +152,7 @@ aside {
 .titulo-principal {
     color: var(--clr-main);
     margin-bottom: 2rem;
+    font-size: 27px;
 }
 
 .contenedor-productos {
@@ -163,7 +164,7 @@ aside {
 .producto-imagen {
     max-width: 100%;
     border-radius: 1rem;
-    height: 270px;
+    height: 230px;
 }
 .content-catalogo{
     display: grid;
@@ -180,6 +181,8 @@ aside {
     display: flex;
     flex-direction: column;
     gap: .25rem;
+    width: 88%;
+    margin-top: 0px;
 }
 
 .producto-titulo {
