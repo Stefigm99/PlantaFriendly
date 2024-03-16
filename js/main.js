@@ -45,7 +45,7 @@ form.addEventListener('submit', function(event) {
               position: "right", 
               stopOnFocus: true, 
               style: {
-                  background: "linear-gradient(to right, #1CB738 , #785ce9)",
+                  background: 'linear-gradient(to right, #FFCC00, #FF6666)',
                   borderRadius: "2rem",
                   textTransform: "uppercase",
                   fontSize: ".75rem"

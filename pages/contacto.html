@@ -62,29 +62,42 @@
           </a>
         </div>
         <script>
-          window.onload = function () {
-            mostrarBotonCerrarSesion();
+          window.onload = function() {
+              mostrarBotonCerrarSesion();
           };
-
+      
           // Función para mostrar u ocultar el botón de cerrar sesión
           function mostrarBotonCerrarSesion() {
-            const sesion = localStorage.getItem('sesion');
-            const btnCerrarSesion = document.getElementById('btnCerrar');
-            const btnInicioSesion = document.getElementById('btnIniciar');
-
-            if (sesion) {
-              btnCerrarSesion.style.display = 'block'; // Mostrar el botón de cerrar sesión
-              btnInicioSesion.style.display = 'none'; // Ocultar el botón de inicio de sesión
-            } else {
-              btnCerrarSesion.style.display = 'none'; // Ocultar el botón de cerrar sesión
-              btnInicioSesion.style.display = 'block'; // Mostrar el botón de inicio de sesión
-            }
+              const sesion = localStorage.getItem('sesion');
+              const btnCerrarSesion = document.getElementById('btnCerrar');
+              const btnInicioSesion = document.getElementById('btnIniciar');
+      
+              if (sesion) {
+                  btnCerrarSesion.style.display = 'block'; // Mostrar el botón de cerrar sesión
+                  btnInicioSesion.style.display = 'none'; // Ocultar el botón de inicio de sesión
+              } else {
+                  btnCerrarSesion.style.display = 'none'; // Ocultar el botón de cerrar sesión
+                  btnInicioSesion.style.display = 'block'; // Mostrar el botón de inicio de sesión
+              }
           }
-          document.getElementById('btnCerrar').addEventListener('click', function () {
-            localStorage.removeItem('sesion');
-            mostrarBotonCerrarSesion();
-          });
-        </script>
+      
+          // Evento click del botón de cerrar sesión
+          document.getElementById('btnCerrar').addEventListener('click', function() {
+              // Utilizar Toastify para mostrar una ventana de confirmación personalizada
+              
+                      Toastify({
+                          text: 'Sesión cerrada. ¡Vuelva pronto!', // Mensaje de confirmación
+                          duration: 3000, 
+                          gravity: 'top', 
+                          position: 'center', 
+                          backgroundColor: 'linear-gradient(to right, #FFCC00, #FF6666)',
+                          stopOnFocus: true 
+                      }).showToast();
+                      // Eliminar la sesión almacenada y actualizar la visualización de los botones de inicio y cierre de sesión
+                      localStorage.removeItem('sesion');
+                      mostrarBotonCerrarSesion();
+                  }).showToast();
+      </script>
     </nav>
     <script>
       // Función para validar el checkbox antes de enviar el formulario

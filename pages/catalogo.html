@@ -45,7 +45,7 @@
         </div>
         <div class="navbar-nav">
           <a href="/pages/loginRegister.html" style="text-decoration: none;"> <button class="nav-button" id="btnIniciar">Iniciar Sesión</button></a>
-          <button class="nav-buttonC" id="btnCerrar">Cerrar sesion</button>
+          <button class="nav-buttonC" style="display: none;" id="btnCerrar">Cerrar sesion</button>
         </div>
         <div id="iconoCarrito">
           <a href="/pages/carrito.html" style="text-decoration: none;">
@@ -56,29 +56,42 @@
       </div>
     </nav>
     <script>
-      window.onload = function () {
-        mostrarBotonCerrarSesion();
+      window.onload = function() {
+          mostrarBotonCerrarSesion();
       };
-
+  
       // Función para mostrar u ocultar el botón de cerrar sesión
       function mostrarBotonCerrarSesion() {
-        const sesion = localStorage.getItem('sesion');
-        const btnCerrarSesion = document.getElementById('btnCerrar');
-        const btnInicioSesion = document.getElementById('btnIniciar');
-
-        if (sesion) {
-          btnCerrarSesion.style.display = 'block'; // Mostrar el botón de cerrar sesión
-          btnInicioSesion.style.display = 'none'; // Ocultar el botón de inicio de sesión
-        } else {
-          btnCerrarSesion.style.display = 'none'; // Ocultar el botón de cerrar sesión
-          btnInicioSesion.style.display = 'block'; // Mostrar el botón de inicio de sesión
-        }
+          const sesion = localStorage.getItem('sesion');
+          const btnCerrarSesion = document.getElementById('btnCerrar');
+          const btnInicioSesion = document.getElementById('btnIniciar');
+  
+          if (sesion) {
+              btnCerrarSesion.style.display = 'block'; // Mostrar el botón de cerrar sesión
+              btnInicioSesion.style.display = 'none'; // Ocultar el botón de inicio de sesión
+          } else {
+              btnCerrarSesion.style.display = 'none'; // Ocultar el botón de cerrar sesión
+              btnInicioSesion.style.display = 'block'; // Mostrar el botón de inicio de sesión
+          }
       }
-      document.getElementById('btnCerrar').addEventListener('click', function () {
-        localStorage.removeItem('sesion');
-        mostrarBotonCerrarSesion();
-      });
-    </script>
+  
+      // Evento click del botón de cerrar sesión
+      document.getElementById('btnCerrar').addEventListener('click', function() {
+          // Utilizar Toastify para mostrar una ventana de confirmación personalizada
+          
+                  Toastify({
+                      text: 'Sesión cerrada. ¡Vuelva pronto!', // Mensaje de confirmación
+                      duration: 3000, 
+                      gravity: 'top', 
+                      position: 'center', 
+                      backgroundColor: 'linear-gradient(to right, #FFCC00, #FF6666)',
+                      stopOnFocus: true 
+                  }).showToast();
+                  // Eliminar la sesión almacenada y actualizar la visualización de los botones de inicio y cierre de sesión
+                  localStorage.removeItem('sesion');
+                  mostrarBotonCerrarSesion();
+              }).showToast();
+  </script>
     <div class="content-catalogo" id="catalogo">   
       <section class="catalogo">
           <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
@@ -92,7 +105,7 @@
         </a>
       </div>
     </main>
-    <footer style="background-color:  #e2e2e2; color: #316331; ">
+    <footer style="background-color:  #fffefe; color: #316331; ">
         <div class="container">
           <div class="logo">
             <img src="/assets/icons/planta.png" alt="Logo de la Tienda de Jardinería">
@@ -125,11 +138,11 @@
           <div class="redes-lista">
             <h4>Síguenos en redes sociales</h4>
             <ul>
-              <li><a href="https://facebook.com" target="_blank"><img src="/assets/icons/facebook.png" alt="Facebook"></a>
+              <li><a href="https://www.facebook.com/jardinlovers/" target="_blank"><img src="/assets/icons/facebook.png" alt="Facebook"></a>
               </li>
-              <li><a href="https://twitter.com" target="_blank"><img src="/assets/icons/twitter.png" alt="Twitter"></a>
+              <li><a href="https://twitter.com/eljardinencasa?lang=es" target="_blank"><img src="/assets/icons/twitter.png" alt="Twitter"></a>
               </li>
-              <li><a href="https://instagram.com" target="_blank"><img src="/assets/icons/instagram.png"
+              <li><a href="https://www.instagram.com/jardin.lovers/" target="_blank"><img src="/assets/icons/instagram.png"
                     alt="Instagram"></a>
               </li>
             </ul>

@@ -106,18 +106,21 @@ function iniciarSesion() {
             // Almacenar información de sesión en el almacenamiento local
             localStorage.setItem('sesion', JSON.stringify(usuario));
             
-            // Usuario encontrado, mostrar mensaje de inicio de sesión exitoso
+            // Mostrar mensaje de bienvenida con el nombre del usuario
+            const mensajeBienvenida = `¡Bienvenido, ${usuario.nombre}!`;
             Toastify({
-                text: '¡Inicio de sesión exitoso!',
+                text: mensajeBienvenida,
                 duration: 3000,
                 gravity: 'top',
-                position: 'right',
+                position: 'center',
                 backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
                 stopOnFocus: true
             }).showToast();
-
+        
             // Redireccionar al índice después del inicio de sesión exitoso
-            window.location.href = '/index.html';
+            setTimeout(() => {
+                window.location.href = '/index.html';
+            }, 1500);
         } else {
             // Usuario no encontrado, mostrar mensaje de error
             Toastify({
